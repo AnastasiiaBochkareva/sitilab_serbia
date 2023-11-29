@@ -4,24 +4,28 @@
 
 .container {
   width: 100%;
-  max-width: 1340px;
+  max-width: 1180px;
   margin-right: auto;
   margin-left: auto;
   padding: 0;
 
-  @include xl {
-    max-width: 1200px;
+  @media (max-width: 700px) {
+    max-width: 315px;
   }
+
+  // @include xl {
+  //   max-width: 1200px;
+  // }
   //@include lg {
   //  max-width: 960px;
   //}
-  @include md {
-    max-width: 990px;
-  }
+  // @include md {
+  //   max-width: 990px;
+  // }
   //@include sm {
   //  max-width: 540px;
   //}
-  @include xs {
-    max-width: 100%;
-  }
+  // @include xs {
+  //   max-width: 100%;
+  // }
 }

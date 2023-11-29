@@ -17,21 +17,25 @@
 @import 'ui/temp'; // < ВРЕМЕННЫЕ СТИЛИ
 
 html {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 15px;
-  line-height: 26px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 18px; /* 128.571% */
 }
 
 img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 body {
-  font-size: 1rem;
+  // font-size: 1rem;
   overflow-x: hidden;
-  background: #e4e4e4;
+  // background: #e4e4e4;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px; /* 128.571% */
 }
 
 ul {
@@ -66,4 +70,5 @@ ul {
 .svg-icon {
   width: 24px;
   height: 24px;
+  fill: #00abdf;
 }

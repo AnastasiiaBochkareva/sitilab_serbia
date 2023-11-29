@@ -2,22 +2,50 @@
 //include catalog
 
 mixin Header(param = {})
-    header.header
-        .container.header__container
-            div.header__img
-                img(src="/assets/img/Logo.png" alt="Logo")
-            nav.header__nav 
-                ul.header__nav_ul
-                    li Услуги
-                        +icon("arrow-down")
-                    li О компании
-                    li Гарантии
-                    li Новости
-                    li Акции
-                    li Контакты
-            .header__controles
-                button.header__controles_btn
-                    +icon("menu-line")
-                button.btn.btn_primary.header__controles_btn
-                    span Запись на сервис
+  .header
+    .container.header__container
+      .header__logo
+        img(src="/assets/img/categories/main-logo.png" alt="logo")
 
+      .header__contacts 
+        .header__mark
+          +icon('mark')
+          span Сербия, Белград
+        .header__phone
+          +icon('phone')
+          span +381-11-777-3777
+
+      ul.header__nav 
+        each el in ['Акции', 'О нас', 'Контакты']
+          li=el
+
+      button.header__lang 
+        div Ru 
+        +icon('arrow-down')
+        ul.header__lang_choosing 
+          li
+            img(src="/assets/img/categories/flag-ru.png" alt="flag-ru")
+            span Русский
+          li
+            img(src="/assets/img/categories/flag-srb.png" alt="flag-srb")
+            span Srpski
+          li
+            img(src="/assets/img/categories/flag-eng.png" alt="flag-eng")
+            span English
+
+
+      .header__controles
+        button.btn.btn_secondary.header__btn 
+          img(src="/assets/img/categories/flag-ru.png" alt="flag-ru")
+          span для граждан России
+        button.btn.btn_primary.header__btn
+          +icon('file')
+          span Прайс-Лист
+        button.header__burger
+          +icon('burger')
+          +icon('close')
+
+      .header__menu 
+        ul.header__list 
+          each el in ['Для граждан России', 'Получить скидку', 'Акции', 'Контакты', 'Прайс лист']
+            li=el
