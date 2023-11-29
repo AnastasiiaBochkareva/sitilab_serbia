@@ -60,13 +60,24 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 30px; /* 187.5% */
+    li {
+      cursor: pointer;
+    }
   }
   &__lang {
     display: flex;
     align-items: center;
     column-gap: 7px;
     position: relative;
-    div {
+    &.active {
+      .header__lang_choosing {
+        display: flex;
+      }
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    &_type {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -89,17 +100,19 @@
       padding: 15px 16px;
       display: flex;
       flex-direction: column;
-      row-gap: 14px;
+      row-gap: 9px;
       position: absolute;
       top: 33px;
       left: -32px;
       display: none;
-      &.active {
-        display: block;
-      }
       li {
         display: flex;
         column-gap: 5px;
+        padding: 4px 6px;
+        &:hover {
+          border-radius: 5px;
+          background: #e6f8fd;
+        }
         img {
           width: 18px;
           height: 12px;
