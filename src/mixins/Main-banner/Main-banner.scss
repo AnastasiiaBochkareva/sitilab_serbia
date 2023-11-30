@@ -1,0 +1,137 @@
+.main-banner {
+  background: linear-gradient(
+    250deg,
+    rgba(45, 72, 209, 0.63) 21.5%,
+    #5aa0f2 49.19%,
+    #00abdf 75.33%
+  );
+  .container {
+    display: flex;
+    justify-content: space-between;
+    min-height: 522px;
+    height: 100%;
+  }
+  &__content {
+    max-width: 460px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__title {
+    color: #fff;
+
+    margin-bottom: 45px;
+  }
+  &__subtitle {
+    color: #fff;
+    font-weight: 500;
+    line-height: 34px; /* 121.429% */
+
+    margin-bottom: 45px;
+  }
+  &__btn {
+    border-radius: 21px;
+    background-color: #ea516d;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px; /* 155.556% */
+    letter-spacing: -0.36px;
+
+    padding: 6px 17px;
+    max-width: 261px;
+    max-height: 40px;
+    width: 100%;
+    transition: 0.5s;
+    &:hover {
+      color: #ea516d;
+      background-color: #fff;
+    }
+  }
+  &__img {
+    max-width: 602.447px;
+    // height: 603.902px;
+    height: 522px;
+    width: 100%;
+    overflow: hidden;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+    .main-banner-mob {
+      display: none;
+    }
+  }
+  @include sm {
+    padding-top: 22px;
+    height: 100%;
+    min-height: 500px;
+    position: relative;
+    .container {
+      // height: 100%;
+      align-items: center;
+    }
+    &__content {
+      max-width: 364px;
+    }
+    &__btn {
+      font-size: 16px;
+    }
+    &__img {
+      position: absolute;
+      height: 400px;
+      max-width: 470px;
+      right: 0;
+    }
+    .title-sm {
+      font-size: 20px;
+    }
+  }
+  @include xs {
+    // padding-top: 22px;
+    // height: 100%;
+    // min-height: 500px;
+    // position: relative;
+    overflow: hidden;
+    .container {
+      flex-direction: column;
+      min-height: 500px;
+    }
+    &__content {
+      align-items: center;
+      max-width: 319px;
+    }
+    &__title,
+    &__subtitle {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    &__btn {
+      font-size: 14px;
+      letter-spacing: -0.28px;
+
+      max-width: 180px;
+    }
+    &__img {
+      position: absolute;
+      top: 23px;
+      height: 500px;
+      img {
+        // object-fit: contain;
+      }
+      .main-banner-desk {
+        display: none;
+      }
+      .main-banner-mob {
+        display: block;
+      }
+    }
+    .title-sm {
+      font-size: 16px;
+      line-height: 34px; /* 212.5% */
+      letter-spacing: -0.32px;
+    }
+  }
+}

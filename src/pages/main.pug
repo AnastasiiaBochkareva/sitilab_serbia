@@ -6,6 +6,17 @@ block variables
 
 block content
 
-    section.section
+    section
+      +Main-banner({})
+
+    section.section.container
+      +Main-nav({})
+
+    section.section.container
+      include ../components/Main-stock/Main-stock
+
+    section.bg-blue
+      .container.section-inner
+        include ../components/Main-services/Main-services
 
     include _modals

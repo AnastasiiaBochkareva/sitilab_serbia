@@ -7,25 +7,25 @@
   max-width: 1180px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0;
+  // padding: 0;
 
-  @media (max-width: 700px) {
-    max-width: 315px;
+  // @media (max-width: 700px) {
+  //   max-width: 315px;
+  // }
+
+  @include xl {
+    max-width: 1200px;
   }
-
-  // @include xl {
-  //   max-width: 1200px;
-  // }
-  //@include lg {
-  //  max-width: 960px;
-  //}
-  // @include md {
-  //   max-width: 990px;
-  // }
-  //@include sm {
-  //  max-width: 540px;
-  //}
-  // @include xs {
-  //   max-width: 100%;
-  // }
+  @include lg {
+    max-width: 960px;
+  }
+  @include md {
+    max-width: 990px;
+  }
+  @include sm {
+    max-width: 750px;
+  }
+  @include xs {
+    max-width: 100%;
+  }
 }

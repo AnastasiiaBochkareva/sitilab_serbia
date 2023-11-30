@@ -1,0 +1,14 @@
+mixin Main-nav(param={})
+  .main-nav
+    .main-nav__title.title-sm Популярные направления
+    .main-nav__cards
+      - const btnTitle = ['Мужское здоровье', 'Женское здоровье', 'Аллергология', 'Общеклинические исследования']
+      - const btnIcon = ['male-sign', 'female-sign', 'flower-sign', 'search-sign']
+        each el, i in Array(4)
+          button.main-nav__btn.btn_primary
+            .main-nav__btn-icon 
+              +icon(btnIcon[i])
+            .main-nav__btn-title=btnTitle[i]
+    button.main-nav__btn-price.btn.btn_primary
+      +icon('file')
+      span Прайс-Лист

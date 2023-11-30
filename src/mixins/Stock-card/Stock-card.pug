@@ -1,0 +1,9 @@
+mixin Stock-card(param={})
+  .stock-card
+    .stock-card__img
+      img(src=`/assets/img/categories/stock${param.img}.png`, alt="stock")
+    .stock-card__info
+      .stock-card__subtitle=param.subtitle
+      .stock-card__title=param.title
+      .stock-card__link 
+        a(href="#") Подробнее

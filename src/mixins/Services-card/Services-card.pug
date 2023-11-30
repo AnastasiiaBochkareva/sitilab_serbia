@@ -1,0 +1,7 @@
+mixin Services-card(param={})
+  .services-card
+    .services-card__img 
+      img(src=`/assets/img/categories/services${param.img}.png`, alt="services")
+    .services-card__content
+      .services-card__title=param.title
+      .services-card__subtitle=param.subtitle
