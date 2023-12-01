@@ -84,7 +84,6 @@
       gap: 14px;
       // flex-direction: column;
       flex-wrap: wrap;
-      padding: 0 30px;
       justify-content: center;
     }
     &__btn {
@@ -107,7 +106,6 @@
       gap: 15px;
       flex-direction: column;
       // flex-wrap: wrap;
-      padding: 0 0 0 30px;
     }
     &__btn {
       flex-direction: row;
@@ -133,7 +131,6 @@
   }
   @media (max-width: 400px) {
     &__cards {
-      padding: 0 0 0 10px;
     }
   }
 }

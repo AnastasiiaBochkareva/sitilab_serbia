@@ -3,7 +3,6 @@
   flex-direction: column;
   row-gap: 47px;
   position: relative;
-  padding-bottom: 37px;
   &__title {
     display: flex;
     align-items: center;
@@ -103,6 +102,8 @@
   }
 
   @media (max-width: 800px) {
+    padding-bottom: 37px;
+
     &__navigation {
       &_next,
       &_prev {
@@ -112,6 +113,9 @@
     &__pagination {
       display: flex;
       // padding-top: 25px;
+    }
+    &__title {
+      justify-content: space-between;
     }
   }
   @include xs {

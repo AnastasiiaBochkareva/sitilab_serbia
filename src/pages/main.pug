@@ -9,7 +9,7 @@ block content
     section
       +Main-banner({})
 
-    section.section.container
+    section.section-top.container
       +Main-nav({})
 
     section.section.container
@@ -18,5 +18,11 @@ block content
     section.bg-blue
       .container.section-inner
         include ../components/Main-services/Main-services
+
+    section.section.container
+        //- include ../components/Main-about/Main-about
+
+    section.container
+        include ../components/Main-contacts/Main-contacts
 
     include _modals

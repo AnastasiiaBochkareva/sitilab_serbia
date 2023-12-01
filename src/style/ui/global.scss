@@ -1,9 +1,28 @@
 .section {
   padding-top: 50px;
+  padding-bottom: 50px;
+  @media (max-width: 800px) {
+    padding: 35px 30px 0px;
+  }
+}
+.section-top {
+  padding-top: 50px;
+  @media (max-width: 800px) {
+    padding: 35px 30px 0px;
+  }
 }
 .section-inner {
   padding-top: 50px;
   padding-bottom: 60px;
+  @media (max-width: 800px) {
+    padding: 35px 30px 40px;
+  }
+}
+.section-inner-full {
+  padding: 40px 50px 60px;
+  @media (max-width: 800px) {
+    padding: 35px 30px 40px;
+  }
 }
 .title {
   font-family: 'Montserrat', sans-serif;
@@ -38,4 +57,7 @@
 }
 .bg-blue {
   background-color: #e6f8fd;
+}
+.bg-dark-blue {
+  background-color: #00abdf;
 }

@@ -1,0 +1,29 @@
+mixin Footer(param={})
+  .footer
+    .container 
+      .footer__col.footer__block-one
+        .footer__col-logo
+          img(src=`/assets/img/categories/main-logo-white.png`, alt="logo")
+        .footer__col-rights © СИТИЛАБ, 2005-2023. Все права защищены
+        .footer__col-note УСЛУГИ ЛИЦЕНЗИРОВАНЫ. ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ. НЕОБХОДИМА КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА
+
+      .footer__col.footer__block-two
+        .footer__col-title Контакты
+          span Белград, Врачар, Дублянская, 41
+          span +381-11-777-3777
+          span.footer-email info@citilab.rs
+        .footer__col-title.footer-stock Акции
+        .footer__col-title.footer-about О нас
+
+      .footer__col.footer__block-three
+        .footer__col-title Принимаем к оплате
+        .footer__col-cards 
+          img(src=`/assets/img/categories/visa.png`, alt="visa")
+          img(src=`/assets/img/categories/master.png`, alt="master")
+          img(src=`/assets/img/categories/mir.png`, alt="mir")
+        button.btn.btn_secondary.footer__btn 
+          img(src="/assets/img/categories/flag-ru.png" alt="flag-ru")
+          span для граждан России
+        button.btn.btn_primary.footer__btn
+          +icon('file')
+          span Прайс-Лист

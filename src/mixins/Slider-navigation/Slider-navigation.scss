@@ -32,4 +32,10 @@
       }
     }
   }
+  @media (max-width: 800px) {
+    &_prev,
+    &_next {
+      display: none;
+    }
+  }
 }
