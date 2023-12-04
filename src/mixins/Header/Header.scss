@@ -1,3 +1,6 @@
+[data-my-modal-close]:not(.active) ~ [data-my-modal] {
+  display: flex !important;
+}
 .header {
   display: flex;
   position: relative;
@@ -55,13 +58,13 @@
     flex-wrap: wrap;
     column-gap: 45px;
     row-gap: 10px;
-
-    color: var(--blue-gray, #3b4b64);
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 30px; /* 187.5% */
     li {
-      cursor: pointer;
+      a {
+        color: var(--blue-gray, #3b4b64);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 30px; /* 187.5% */
+      }
     }
   }
   &__lang {
@@ -75,6 +78,12 @@
       }
       svg {
         transform: rotate(180deg);
+      }
+    }
+    &:hover {
+      .header__lang_type {
+        background-color: #00abdf;
+        color: #e6f8fd;
       }
     }
     &_type {
@@ -106,9 +115,12 @@
       left: -32px;
       display: none;
       li {
-        display: flex;
-        column-gap: 5px;
-        padding: 4px 6px;
+        a {
+          display: flex;
+          column-gap: 5px;
+          padding: 4px 6px;
+          text-decoration: none;
+        }
         &:hover {
           border-radius: 5px;
           background: #e6f8fd;
@@ -148,6 +160,12 @@
   }
   &__burger {
     display: none;
+    &.active {
+      display: flex;
+    }
+    &[data-my-modal-close]:not(.active) ~ .header__burger {
+      display: flex !important;
+    }
   }
   &__btn {
     max-width: 240px;
@@ -167,21 +185,7 @@
       letter-spacing: -0.32px;
     }
   }
-  &__menu {
-    display: none;
-    padding: 20px 30px 167px;
-    color: #00abdf;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 50px; /* 312.5% */
-    letter-spacing: -0.32px;
-    // width: 100%;
-    top: 50px;
-    position: absolute;
-    &.active {
-      display: block;
-    }
-  }
+
   @include lg {
     &__container {
       padding: 15px 0;
@@ -258,7 +262,6 @@
       display: none;
     }
     &__burger {
-      display: flex;
       align-items: center;
       justify-content: center;
       stroke: #ea516d;
@@ -324,7 +327,6 @@
       display: none;
     }
     &__burger {
-      display: flex;
       align-items: center;
       justify-content: center;
       stroke: #ea516d;

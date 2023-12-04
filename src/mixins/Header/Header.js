@@ -12,7 +12,6 @@ function showListLanguages() {
     }
     const close = document.querySelector('.header__lang');
     const modal = target.closest('.header__lang_choosing');
-    console.log(modal);
     if (close.classList.contains('active') && !button && !modal) {
       close.classList.remove('active');
     }

@@ -1,4 +1,5 @@
 .main-about {
+  position: relative;
   &__title {
     margin-bottom: 30px;
     text-align: center;
@@ -14,9 +15,32 @@
     width: 100%;
     max-width: 280px;
     overflow: hidden;
+    border: 1px solid black;
     img {
       object-fit: cover;
       height: 100%;
+    }
+  }
+  &__slider {
+    overflow: hidden;
+    .swiper-wrapper {
+      // column-gap: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .swiper-slide {
+      width: max-content;
+    }
+  }
+  @media (max-width: 1270px) {
+    padding-bottom: 42px;
+    .slider-pagination {
+      display: flex;
+    }
+  }
+  @include xs {
+    &__img {
+      max-width: 100%;
     }
   }
 }

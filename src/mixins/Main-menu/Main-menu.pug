@@ -1,0 +1,6 @@
+mixin Main-menu(param={})
+  .main-menu 
+    ul.main-menu__list 
+      each el in ['Для граждан России', 'Получить скидку', 'Акции', 'Контакты', 'Прайс лист']
+        li
+          a(href='#')=el

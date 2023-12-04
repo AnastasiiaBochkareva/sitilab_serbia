@@ -1,0 +1,43 @@
+mixin Main-review(param={})
+  .main-review
+    .main-review__title.title-sm Отзывы
+    .main-review__slider 
+      .swiper-wrapper 
+        .swiper-slide 
+          +Card-review({
+            img: '1',
+            name: 'Елена Смирнова',
+            date: '6 октября 2023 г. в 16:15',
+            text: 'Очень внимательный и чуткий персонал',
+          })
+        .swiper-slide
+          +Card-review({
+            img: '1',
+            name: 'Ирина Десяткина',
+            date: '2 октября 2023 г. в 11:09',
+            text: 'Отличная лаборатория, всегда сдаю тут анализы, все приходит во время, персонал дружелюбный и квалифицированный. Рекомендую!',
+          })
+        .swiper-slide
+          +Card-review({
+            img: '1',
+            name: 'Елена Смирнова',
+            date: '6 октября 2023 г. в 16:15',
+            text: 'Очень внимательный и чуткий персонал',
+          })
+        .swiper-slide
+          +Card-review({
+            img: '1',
+            name: 'Ирина Десяткина',
+            date: '2 октября 2023 г. в 11:09',
+            text: 'Отличная лаборатория, всегда сдаю тут анализы, все приходит во время, персонал дружелюбный и квалифицированный. Рекомендую!',
+          })
+        .swiper-slide
+          +Card-review({
+            img: '1',
+            name: 'Елена Смирнова',
+            date: '6 октября 2023 г. в 16:15',
+            text: 'Очень внимательный и чуткий персонал fff  ffffffffff ffff fffff f ffffffffff ffff ffffffff fff fffffffffff ffffffffff f f f f f ff fffffff fffffffffffffff ffffffffff fffffffffff f f f f fffff ffffffff fffff f ffffff fffffffffff f f f f f f ffffffffffю Очень внимательный и чуткий персонал fff  ffffffffff ffff fffff f ffffffffff ffff ffffffff fff fffffffffff ffffffffff f f f f f ff fffffff fffffffffffffff ffffffffff fffffffffff f f f f fffff ffffffff fffff f ffffff fffffffffff f f f f f f ffffffffff',
+          })
+    +Slider-navigation()
+    .main-review__btn
+      button.btn.btn_secondary Оставить отзыв

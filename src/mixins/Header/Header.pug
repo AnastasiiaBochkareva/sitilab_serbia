@@ -17,21 +17,25 @@ mixin Header(param = {})
 
       ul.header__nav 
         each el in ['Акции', 'О нас', 'Контакты']
-          li=el
+          li
+            a(href="#")=el
 
       button.header__lang 
         .header__lang_type Ru
         +icon('arrow-down')
         ul.header__lang_choosing 
           li
-            img(src="/assets/img/categories/flag-ru.png" alt="flag-ru")
-            span Русский
+            a(href="#") 
+              img(src="/assets/img/categories/flag-ru.png" alt="flag-ru")
+              span Русский
           li
-            img(src="/assets/img/categories/flag-srb.png" alt="flag-srb")
-            span Srpski
+            a(href="#") 
+              img(src="/assets/img/categories/flag-srb.png" alt="flag-srb")
+              span Srpski
           li
-            img(src="/assets/img/categories/flag-eng.png" alt="flag-eng")
-            span English
+            a(href="#") 
+              img(src="/assets/img/categories/flag-eng.png" alt="flag-eng")
+              span English
 
 
       .header__controles
@@ -41,11 +45,9 @@ mixin Header(param = {})
         button.btn.btn_primary.header__btn
           +icon('file')
           span Прайс-Лист
-        button.header__burger
+        button.header__burger(data-my-modal='#mobile-menu').active
           +icon('burger')
+        button.header__burger(data-my-modal-close='#mobile-menu')
           +icon('close')
 
-      .header__menu 
-        ul.header__list 
-          each el in ['Для граждан России', 'Получить скидку', 'Акции', 'Контакты', 'Прайс лист']
-            li=el
+      

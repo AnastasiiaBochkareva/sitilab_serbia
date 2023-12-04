@@ -1,0 +1,21 @@
+mixin Card-review(param={})
+  .card-review
+
+    .card-review__head
+      .card-review__head-col 
+        .card-review__head-img
+          img(src=`/assets/img/categories/user${param.img}.png`, alt="user")
+      .card-review__head-col
+        .card-review__head-name=param.name
+        .card-review__head-date=param.date
+
+    .card-review__body
+      .card-review__body-geo 
+        span Белград, Врачар, Дублянская 41
+        img(src=`/assets/img/categories/gis.png`, alt="gis")
+      .card-review__body-rating
+        each el in Array(5)
+          +icon('star')
+      .card-review__body-text.truncate-text=param.text
+      .card-review__body-link
+        a(href="#") Читать полностью 

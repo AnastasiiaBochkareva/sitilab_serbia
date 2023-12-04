@@ -12,17 +12,30 @@
     text-align: center;
 
     margin-bottom: 20px;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 13;
   }
   &__info {
-    display: flex;
-    column-gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    // column-gap: 40px;
+    gap: 40px;
+    .main-contacts {
+      &__work {
+        display: flex;
+        min-height: 322px;
+      }
+    }
   }
   &__phone,
   &__map,
   &__work {
     border-radius: 10px;
     background-color: #fff;
-    max-height: 322px;
+    min-height: 322px;
     height: auto;
   }
   &__phone {
@@ -31,7 +44,11 @@
     justify-content: center;
     padding: 24px;
     width: 100%;
-    max-width: 315px;
+    // max-width: 315px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 5;
   }
   &__phone-title {
     color: var(--blue-gray, #3b4b64);
@@ -43,13 +60,14 @@
     margin-bottom: 15px;
   }
   &__phone-number {
-    color: #00abdf;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 24px; /* 133.333% */
-    letter-spacing: -0.36px;
-
     margin-bottom: 13px;
+    a {
+      color: #00abdf;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 24px; /* 133.333% */
+      letter-spacing: -0.36px;
+    }
   }
   &__phone-subtitle {
     color: var(--gray2, #8e9aab);
@@ -60,20 +78,33 @@
   }
   &__map {
     width: 100%;
-    max-width: 370px;
-    height: 322px;
+    // max-width: 370px;
+    min-height: 322px;
     overflow: hidden;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 5;
+    grid-column-end: 9;
     img {
       height: 100%;
       object-fit: cover;
     }
   }
+  .section-top {
+    display: none;
+  }
   &__work {
-    display: flex;
+    // display: none;
     flex-direction: column;
     padding: 12px 38px 19px 24px;
     width: 100%;
-    max-width: 315px;
+    // max-width: 315px;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 9;
+    grid-column-end: 13;
     &_head {
       display: flex;
       column-gap: 14px;
@@ -117,8 +148,9 @@
           letter-spacing: -0.28px;
           background-color: #f4fbeb;
           padding: 3px 9px;
-          max-width: 136px;
+          // max-width: 136px;
           width: 100%;
+          max-width: 136px;
         }
         .work-day {
           color: var(--blue-gray, #3b4b64);
@@ -141,6 +173,100 @@
       border-radius: 30px;
       background-color: #ffe7ea !important;
       margin-top: 6px;
+    }
+  }
+  @include lg {
+    &__info {
+      .main-contacts {
+        &__work {
+          // display: none;
+          grid-row-start: 3;
+          grid-column-start: 7;
+          grid-column-end: 13;
+          max-width: 100%;
+        }
+      }
+    }
+    &__phone {
+      grid-column-start: 1;
+      grid-column-end: 7;
+      grid-row-start: 3;
+      max-width: 100%;
+    }
+    &__map {
+      grid-column-start: 1;
+      max-width: 100%;
+      grid-column-end: 13;
+      max-height: 322px;
+    }
+  }
+  @include sm {
+    &__info {
+      gap: 20px;
+    }
+  }
+  @include xs {
+    &__title {
+      display: none;
+    }
+    &__info {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 0px;
+      row-gap: 0;
+      .main-contacts {
+        &__work {
+          display: none;
+        }
+      }
+    }
+    .section-top {
+      display: block;
+    }
+    &__work {
+      display: flex;
+      border: 1px solid var(--gray1, #b2bac6);
+      border-radius: 0%;
+      max-width: 100%;
+      padding: 15px;
+      min-height: 327px;
+    }
+    &__phone {
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 1;
+      grid-column-end: 5;
+      max-width: 100%;
+      padding: 21px 23px;
+    }
+    &__subtitle {
+      grid-row-start: 2;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 5;
+      max-width: 100%;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 24px; /* 133.333% */
+      letter-spacing: -0.36px;
+      margin: 28px 0 17px;
+    }
+    &__map {
+      grid-row-start: 3;
+      grid-column-start: 1;
+      grid-column-end: 5;
+      max-width: 100%;
+
+      min-height: 273px;
+      max-height: 273px;
+    }
+    &__phone {
+      max-height: 150px;
+      min-height: 150px;
+    }
+  }
+  @media (max-width: 400px) {
+    &__work {
+      padding: 5px;
     }
   }
 }
