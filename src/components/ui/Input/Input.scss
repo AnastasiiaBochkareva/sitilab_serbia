@@ -53,7 +53,9 @@
     }
 
     &-remove {
-      svg { fill: $ui-dark-2; }
+      svg {
+        fill: $ui-dark-2;
+      }
     }
   }
 
@@ -105,7 +107,7 @@
 
     &:focus,
     &:not(:placeholder-shown) {
-      +.input__placeholder {
+      + .input__placeholder {
         display: none;
       }
     }
@@ -154,7 +156,7 @@
     //border: 1px solid $ui-gray-1;
     border: none;
     background-color: $ui-white;
-    padding: 11px 12px;
+    padding: 12px 15px;
     font-size: 1rem;
     line-height: 1.467rem;
 
@@ -165,7 +167,7 @@
     }
 
     &:required {
-      +.input__placeholder::before {
+      + .input__placeholder::before {
         content: '*';
         position: absolute;
         top: -5px;
@@ -176,7 +178,7 @@
 
     &:focus,
     &:not(:placeholder-shown) {
-      +.input__placeholder {
+      + .input__placeholder {
         display: none;
       }
     }
@@ -192,8 +194,7 @@
     cursor: text;
     font-size: 1rem;
     line-height: 22px;
-    transition: top $transition,
-                font-size $transition;
+    transition: top $transition, font-size $transition;
   }
 
   &__btns {
@@ -270,16 +271,19 @@
 
       &:not(:placeholder-shown),
       &:focus {
-        +.input__placeholder {
+        + .input__placeholder {
           display: block;
-          font-size: 11px;
-          line-height: 12px;
           top: calc(14px);
+          color: var(--gray1, #b2bac6);
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 16px; /* 114.286% */
+          letter-spacing: -0.28px;
         }
       }
 
       &_error {
-        +.input__placeholde {
+        + .input__placeholde {
           color: $text-error;
         }
       }
@@ -302,7 +306,7 @@
       padding: 0 4px 0 8px;
       &:focus,
       &:not(:placeholder-shown) {
-        +.input__placeholder {
+        + .input__placeholder {
           display: block;
         }
       }
@@ -334,11 +338,11 @@
       padding-inline: 35px;
       text-align: center;
     }
-    input:focus + .input__placeholder, input:not(:placeholder-shown) + .input__placeholder {
+    input:focus + .input__placeholder,
+    input:not(:placeholder-shown) + .input__placeholder {
       display: initial;
     }
   }
-
 
   // status
   &_success,
@@ -371,7 +375,7 @@
 
   &_success {
     &::before {
-      background: url("~@/assets/img/svg/success.svg");
+      background: url('~@/assets/img/svg/success.svg');
       background-size: contain;
     }
     &.focus::after,
@@ -387,7 +391,7 @@
 
   &_error {
     &::before {
-      background: url("~@/assets/img/svg/error.svg");
+      background: url('~@/assets/img/svg/error.svg');
       background-size: contain;
     }
     &.focus::after,
@@ -435,11 +439,11 @@
       transform: translateY(-50%);
       width: 20px;
       height: 20px;
-      background: url("~@/assets/img/svg/select-toggle.svg") center center no-repeat;
+      background: url('~@/assets/img/svg/select-toggle.svg') center center
+        no-repeat;
       transition: transform $transition;
     }
   }
-
 
   // BLOCKS
   &__dropdown {
@@ -487,12 +491,12 @@
           transform: translateY(-50%);
           width: 20px;
           height: 20px;
-          background: url("~@/assets/img/svg/select-checked.svg") center center no-repeat;
+          background: url('~@/assets/img/svg/select-checked.svg') center center
+            no-repeat;
         }
       }
     }
   }
-
 
   // STATUS
   &.active {
@@ -532,10 +536,10 @@
 
   &:hover {
     .checkbox__label {
-      color: $text-1;
+      color: #fff;
 
       &::before {
-        border-color: $ui-primary;
+        border-color: $ui-white;
       }
     }
   }
@@ -548,8 +552,8 @@
     &:checked {
       + .checkbox__label {
         &::before {
-          border-color: $ui-primary;
-          background-color: $ui-primary;
+          border-color: $ui-white;
+          background-color: $ui-white;
         }
         &::after {
           display: block;
@@ -587,7 +591,7 @@
           display: block;
           width: 12px;
           height: 12px;
-          background-color: $ui-primary;
+          background-color: $ui-white;
           border-radius: 2px;
           transform: none;
           left: 4px;
@@ -600,10 +604,11 @@
   }
 
   &__label {
-    height: 20px;
-    font-size: 1rem;
-    line-height: 1.47;
-    color: $text-2;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px; /* 150% */
+    letter-spacing: -0.24px;
     transition: color $transition;
     width: 100%;
     cursor: pointer;
@@ -613,11 +618,11 @@
       background-color: #ffffff;
       border-radius: 2px;
       left: 0;
-      height: 20px;
+      height: 24px;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 20px;
+      width: 24px;
       border: 1px solid $ui-gray-1;
       transition: border-color $transition;
       cursor: pointer;
@@ -625,11 +630,11 @@
 
     &:after {
       content: '';
-      border: solid $ui-white;
+      border: solid $ui-dark-1;
       border-width: 0 1.5px 1.5px 0;
       display: none;
       height: 10px;
-      left: 7px;
+      left: 10px;
       position: absolute;
       top: 50%;
       transform: translateY(calc(-50% - 2px)) rotate(45deg);
@@ -683,10 +688,8 @@
 
 ///////// radio ///////////
 .radio {
-
   display: flex;
   align-items: center;
-
 
   &:hover {
     span:before {
@@ -764,7 +767,6 @@
     }
   }
 
-
   input:not(:checked) + span:after {
     opacity: 0;
   }
@@ -836,9 +838,7 @@
       height: 16px;
       border-radius: 16px;
       background: $ui-gray-2;
-      transition: left $transition,
-      right $transition,
-      background $transition;
+      transition: left $transition, right $transition, background $transition;
     }
   }
 

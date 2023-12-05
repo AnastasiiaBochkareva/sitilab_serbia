@@ -1,0 +1,39 @@
+mixin Get-discount(param={})
+  .get-discount
+    button.get-discount__btn-close(data-my-modal-close='#get-discount')
+      +icon('close')
+    .get-discount__img 
+      img(src=`/assets/img/categories/discount.png`, alt="discount")
+    form.get-discount__form
+      .get-discount__title 
+        span Заполните форму и получите промокод на скидку
+      +Input({
+        type: 'text',
+        placeholder: 'Фамилия *',
+      })
+      +Input({
+        type: 'text',
+        placeholder: 'Имя *',
+      })
+      +Input({
+        type: 'text',
+        placeholder: '+7 (___) ___-__-__ *',
+      })
+      +Input({
+        type: 'text',
+        placeholder: 'E-mail *',
+      })
+      .get-discount__required * Поля, обязательные для заполнения
+      .get-discount__checkbox
+        +Checkbox({
+          text: 'Я согласен на обработку',
+        }) 
+        a(href="#") персональных данных
+      button.get-discount__btn Получить скидку
+
+
+    .get-discount__success
+      img(src=`/assets/img/categories/success.png`, alt="success")
+      .get-discount__success_title Готово!
+      .get-discount__success_subtitle Промокод ждет вас в почтовом ящике! Просто назовите его при оформлении заказа и пройдите исследования со скидкой.
+
