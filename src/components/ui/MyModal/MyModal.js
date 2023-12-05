@@ -122,8 +122,16 @@ export default class MyModal {
       clickOnCloseSelector?.classList.remove('active');
       openBtn?.classList.add('active');
     }
-    if (clickOnCloseSelector || clickOutsideActiveModal)
+    if (clickOnCloseSelector || clickOutsideActiveModal) {
+      if (
+        clickOutsideActiveModal &&
+        !clickOnCloseSelector &&
+        document.querySelector('.my-modal_mobile-menu.active')
+      ) {
+        return;
+      }
       this.closeAllActive(activeModals);
+    }
   }
 
   open(modal) {
@@ -205,11 +213,11 @@ export default class MyModal {
     activeModals.forEach(async (modal) => {
       await this.close(modal, true);
     });
-    document
-      .querySelectorAll(`[${this.config.closeSelector}]`)
-      ?.forEach((el) => {
-        el.classList.remove('active');
-      });
+    // document
+    //   .querySelectorAll(`[${this.config.closeSelector}]`)
+    //   ?.forEach((el) => {
+    //     el.classList.remove('active');
+    //   });
     return this;
   }
 
