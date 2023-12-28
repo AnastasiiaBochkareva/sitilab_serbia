@@ -55,6 +55,8 @@
 	 min-height: 118px;
 	 display: flex;
 	 align-items: center;
+	 padding-top: 22px;
+	 padding-bottom: 22px;
 }
  .cashback-desktop:not(:last-child) {
 	 margin-bottom: 10px;

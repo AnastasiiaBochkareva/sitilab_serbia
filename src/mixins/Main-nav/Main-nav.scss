@@ -28,7 +28,7 @@
     row-gap: 12px;
     padding: 10px 20px;
     min-height: 124px;
-    &:hover {
+    &:hover:not(.btn_no-hover) {
       .main-nav {
         &__btn-icon {
           background-color: #fff;

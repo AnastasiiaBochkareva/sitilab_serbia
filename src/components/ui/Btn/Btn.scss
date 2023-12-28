@@ -54,7 +54,7 @@ button {
     color: #00abdf;
     transition: 0.5s;
 
-    &:hover:not([disabled]) {
+    &:hover:not([disabled]):not(.btn_no-hover) {
       background-color: #00abdf;
       color: #ffffff;
       svg {
@@ -68,6 +68,12 @@ button {
       stroke: #00abdf;
     }
   }
+  // &_no-hover {
+  //   &:hover {
+  //     background-color: #ffffff !important;
+  //     color: #00abdf !important;
+  //   }
+  // }
 
   // secondary
   &_secondary {
