@@ -55,56 +55,57 @@ const mainStock = new Swiper('.main-stock__slider', {
   },
 });
 
-const mainServices = new Swiper('.main-services__slider', {
-  modules: [Navigation, Pagination, Autoplay],
-  slidesPerView: '3',
-  spaceBetween: 20,
-  navigation: {
-    prevEl: '.slider-navigation_prev',
-    nextEl: '.slider-navigation_next',
-  },
-  observer: true,
-  observeParents: true,
-  observeSlideChildren: true,
-  grabCursor: true,
-  slideToClickedSlide: true,
-  pagination: {
-    el: '.slider-pagination',
-    type: 'bullets',
-  },
-  autoplay: {
-    delay: 5000, // задержка между слайдами в миллисекундах (в данном случае 5 секунд)
-    disableOnInteraction: false, // оставлять ли автопрокрутку после взаимодействия пользователя с слайдером
-  },
-  breakpoints: {
-    1260: {
-      slidesPerView: '3',
-      spaceBetween: 20,
-    },
-    1001: {
-      slidesPerView: '2',
-    },
-    800: {
-      slidesPerView: '2.5',
-      spaceBetween: 10,
-    },
-    700: {
-      slidesPerView: '2',
-    },
-    600: {
-      slidesPerView: '1.8',
-    },
-    500: {
-      slidesPerView: '1.6',
-    },
-    430: {
-      slidesPerView: '1.4',
-    },
-    300: {
-      slidesPerView: '1',
-    },
-  },
-});
+// блок с вопросами врачу 1й вариант
+// const mainServices = new Swiper('.main-services__slider', {
+//   modules: [Navigation, Pagination, Autoplay],
+//   slidesPerView: '3',
+//   spaceBetween: 20,
+//   navigation: {
+//     prevEl: '.slider-navigation_prev',
+//     nextEl: '.slider-navigation_next',
+//   },
+//   observer: true,
+//   observeParents: true,
+//   observeSlideChildren: true,
+//   grabCursor: true,
+//   slideToClickedSlide: true,
+//   pagination: {
+//     el: '.slider-pagination',
+//     type: 'bullets',
+//   },
+//   autoplay: {
+//     delay: 5000, // задержка между слайдами в миллисекундах (в данном случае 5 секунд)
+//     disableOnInteraction: false, // оставлять ли автопрокрутку после взаимодействия пользователя с слайдером
+//   },
+//   breakpoints: {
+//     1260: {
+//       slidesPerView: '3',
+//       spaceBetween: 20,
+//     },
+//     1001: {
+//       slidesPerView: '2',
+//     },
+//     800: {
+//       slidesPerView: '2.5',
+//       spaceBetween: 10,
+//     },
+//     700: {
+//       slidesPerView: '2',
+//     },
+//     600: {
+//       slidesPerView: '1.8',
+//     },
+//     500: {
+//       slidesPerView: '1.6',
+//     },
+//     430: {
+//       slidesPerView: '1.4',
+//     },
+//     300: {
+//       slidesPerView: '1',
+//     },
+//   },
+// });
 
 if (document.documentElement.clientWidth < 1270) {
   const mainAbout = new Swiper('.main-about__slider', {

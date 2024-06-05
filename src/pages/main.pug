@@ -9,15 +9,16 @@ block content
     section
       +Main-banner({})
 
+    section.container.section
+        include ../components/Main-services/Main-services
+
     section.section-top.container
       +Main-nav({})
 
     section.section.container
       include ../components/Main-stock/Main-stock
 
-    section.bg-blue
-      .container.section-inner
-        include ../components/Main-services/Main-services
+    
 
     section.section.container
         include ../components/Main-about/Main-about

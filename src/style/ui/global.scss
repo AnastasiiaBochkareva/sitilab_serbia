@@ -1,12 +1,16 @@
 .section {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  @media (max-width: 800px) {
-    padding: 35px 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include sm {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
-  @media (max-width: 400px) {
-    padding: 35px 20px;
-  }
+  // @media (max-width: 800px) {
+  //   padding: 35px 30px;
+  // }
+  // @media (max-width: 400px) {
+  //   padding: 35px 20px;
+  // }
 }
 .section-top {
   padding-top: 50px;
@@ -66,6 +70,23 @@
   }
   @include xs {
   }
+}
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -2%;
+}
+.subtitle-sm {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -2%;
+}
+.text-blue {
+  color: rgb(0, 171, 223);
 }
 .bg-blue {
   background-color: #e6f8fd;

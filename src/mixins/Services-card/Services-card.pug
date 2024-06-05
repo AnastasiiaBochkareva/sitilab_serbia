@@ -1,20 +1,36 @@
 mixin Services-card(param={})
   .services-card
-    .services-card__img 
-      img(src=`/assets/img/categories/services${param.img}.png`, alt="services")
-      .services-card__tag 
-        if(param.free)
-          span Бесплатно
-        if(param.pay)
-          span 50 ₽
-    .services-card__content
-      .services-card__title=param.title
-      .services-card__subtitle=param.subtitle
-      if(param.decipher )
-        button.btn.btn_primary.services-card__btn
-          span Расшифровать результаты
-      if(param.decipherPayment)
-        button.btn.btn_primary.services-card__btn
-          span Расшифровать результаты за 50₽
-      button.btn.btn_secondary.services-card__btn 
-        span Задать вопрос врачу
+    .services-card__title.subtitle=param.title
+      .services-card__number=param.number
+    .services-card__subtitle.subtitle-sm=param.subtitle
+    if (param.subtitleTwo)
+      .services-card__subtitle.subtitle-sm=param.subtitleTwoText
+    button.btn.btn_secondary.services-card__btn(class=param.btnClasses)=param.btn
+    if (param.btnMob)
+      button.btn.btn_secondary.services-card__btn(class=param.btnClassesMob)=param.btnMobText
+    if (param.file)
+      button.btn.btn_primary.services-card__file.subtitle Список доступных тестов
+        +icon('file')
+
+
+
+
+  // блок спроси врача 1й вариант
+    //- .services-card__img 
+    //-   img(src=`/assets/img/categories/services${param.img}.png`, alt="services")
+    //-   .services-card__tag 
+    //-     if(param.free)
+    //-       span Бесплатно
+    //-     if(param.pay)
+    //-       span 50 ₽
+    //- .services-card__content
+    //-   .services-card__title=param.title
+    //-   .services-card__subtitle=param.subtitle
+    //-   if(param.decipher )
+    //-     button.btn.btn_primary.services-card__btn
+    //-       span Расшифровать результаты
+    //-   if(param.decipherPayment)
+    //-     button.btn.btn_primary.services-card__btn
+    //-       span Расшифровать результаты за 50₽
+    //-   button.btn.btn_secondary.services-card__btn 
+    //-     span Задать вопрос врачу

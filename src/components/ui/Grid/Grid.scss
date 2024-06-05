@@ -12,7 +12,8 @@
     max-width: 1200px;
   }
   @include lg {
-    max-width: 960px;
+    max-width: 990px;
+    // max-width: 960px;
   }
   @include md {
     max-width: 990px;
@@ -22,5 +23,7 @@
   }
   @include xs {
     max-width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }

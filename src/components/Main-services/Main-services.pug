@@ -1,50 +1,81 @@
 .main-services
+  .main-services__img
+    img(src="/assets/img/categories/doctor.png", alt="", class='main-services__img-desktop')
+    img(src="/assets/img/categories/doctor-mob.png", alt="", class='main-services__img-mobile')
   .main-services__info
-    .main-services__title 
-      img(src=`/assets/img/categories/flag-ru.png`, alt="flag")
-      span.title-sm Спроси врача
-    .main-services__subtitle Сервис медицинской поддержки для русскоговорящих пациентов
-    button.btn.btn_primary.main-services__btn 
-      span Расшифровать результаты
-    button.btn.btn_primary.main-services__btn
-      span Расшифровать результаты экспертом за 50₽
-    button.btn.btn_secondary.main-services__btn 
-      span Задать вопрос врачу
+    .main-services__title
+      img(src="/assets/img/categories/flag-ru.png", alt="")
+      .title-sm Спроси врача
+      .main-services__promo.subtitle-sm Бесплатно
+    .main-services__subtitle.subtitle.text-blue Сервис медицинской поддержки для русскоговорящих пациентов
   .main-services__cards
-    +Slider-navigation()
-    .main-services__slider
-      .swiper-wrapper 
-        .swiper-slide
-          +Services-card({
-            img: '1',
-            title: 'Расшифровка результатов анализов ситилаб',
-            subtitle: 'Опытные врачи помогут грамотно интерпретировать результаты анализов. Услуга бесплатная, доступна для всех клиентов сети медицинских лабораторий ситилаб.',
-            decipher: true,
-            free: true
-          })
-        .swiper-slide
-          +Services-card({
-            img: '2',
-            title: 'Помощь в выборе анализов и подготовка к сдаче',
-            subtitle: 'Не уверены, какие анализы нужно сдать? специалист проконсультирует и поможет сделать правильный выбор. также расскажет, как правильно подготовиться к сдаче анализов. от соблюдения рекомендаций может зависеть точность результатов.',
-            decipher: true,
-            free: true
-          })
-        .swiper-slide
-          +Services-card({
-            img: '3',
-            title: 'Направление к профильным специалистам, помощь в выборе клиники и врача',
-            subtitle: 'Куда обратиться после того как сдали анализы? Врачи ситилаб помогут выбрать нужного специалиста и порекомендуют проверенную клинику.',
-            decipher: true,
-            free: true
-          })
-        .swiper-slide
-          +Services-card({
-            img: '4',
-            title: 'Второе мнение. Расшифровка результатов анализов ситилаб экспертом за 50₽ ',
-            subtitle: 'второе мнение - это независимая экспертная оценка врача ситилаб, дополнительная консультация медицинского специалиста по результатам проведенных исследований.',
-            decipherPayment: true,
-            pay: true
-          })
-      +Slider-pagination({})
+    +Services-card({
+          number: '1.',
+          title: 'Расшифровка результатов анализов',
+          subtitle: 'Опытные врачи помогут грамотно интерпретировать результаты анализов.',
+          subtitleTwo: true,
+          subtitleTwoText: 'Услуга бесплатная, доступна для всех клиентов сети медицинских лабораторий ситилаб.',
+          btn: 'Расшифровать результаты',
+          btnClasses: 'services-card__btn-desktop'
+        })
+    +Services-card({
+          number: '2.',
+          title: 'Помощь в выборе анализов и подготовка к сдаче',
+          subtitle: 'Не уверены, какие анализы нужно сдать? специалист проконсультирует и поможет сделать правильный выбор. также расскажет, как правильно подготовиться к сдаче анализов. от соблюдения рекомендаций может зависеть точность результатов.',
+          btn: 'Задать вопрос врачу',
+          file: true,
+          btnMob: true,
+          btnMobText: 'Расшифровать результаты',
+          btnClassesMob: 'services-card__btn-mobile',
+        })
+
+// блок с вопросами врачу 1й вариант
+  //- .main-services__info
+  //-   .main-services__title 
+  //-     img(src=`/assets/img/categories/flag-ru.png`, alt="flag")
+  //-     span.title-sm Спроси врача
+  //-   .main-services__subtitle Сервис медицинской поддержки для русскоговорящих пациентов
+  //-   button.btn.btn_primary.main-services__btn 
+  //-     span Расшифровать результаты
+  //-   button.btn.btn_primary.main-services__btn
+  //-     span Расшифровать результаты экспертом за 50₽
+  //-   button.btn.btn_secondary.main-services__btn 
+  //-     span Задать вопрос врачу
+  //- .main-services__cards
+  //-   +Slider-navigation()
+  //-   .main-services__slider
+  //-     .swiper-wrapper 
+  //-       .swiper-slide
+  //-         +Services-card({
+  //-           img: '1',
+  //-           title: 'Расшифровка результатов анализов ситилаб',
+  //-           subtitle: 'Опытные врачи помогут грамотно интерпретировать результаты анализов. Услуга бесплатная, доступна для всех клиентов сети медицинских лабораторий ситилаб.',
+  //-           decipher: true,
+  //-           free: true
+  //-         })
+  //-       .swiper-slide
+  //-         +Services-card({
+  //-           img: '2',
+  //-           title: 'Помощь в выборе анализов и подготовка к сдаче',
+  //-           subtitle: 'Не уверены, какие анализы нужно сдать? специалист проконсультирует и поможет сделать правильный выбор. также расскажет, как правильно подготовиться к сдаче анализов. от соблюдения рекомендаций может зависеть точность результатов.',
+  //-           decipher: true,
+  //-           free: true
+  //-         })
+  //-       .swiper-slide
+  //-         +Services-card({
+  //-           img: '3',
+  //-           title: 'Направление к профильным специалистам, помощь в выборе клиники и врача',
+  //-           subtitle: 'Куда обратиться после того как сдали анализы? Врачи ситилаб помогут выбрать нужного специалиста и порекомендуют проверенную клинику.',
+  //-           decipher: true,
+  //-           free: true
+  //-         })
+  //-       .swiper-slide
+  //-         +Services-card({
+  //-           img: '4',
+  //-           title: 'Второе мнение. Расшифровка результатов анализов ситилаб экспертом за 50₽ ',
+  //-           subtitle: 'второе мнение - это независимая экспертная оценка врача ситилаб, дополнительная консультация медицинского специалиста по результатам проведенных исследований.',
+  //-           decipherPayment: true,
+  //-           pay: true
+  //-         })
+  //-     +Slider-pagination({})
     
