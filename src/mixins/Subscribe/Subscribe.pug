@@ -1,0 +1,15 @@
+mixin Subscribe(param={})
+  .subscribe
+    .subscribe__row
+      .subscribe__title.title-sm Подписаться на рассылки
+      +Input({ type: 'textarea', placeholder: 'Имя' })
+      +Input({ type: 'textarea', placeholder: 'E-mail*' })
+      button.btn.btn_secondary Подписаться
+    .subscribe__row
+      .subscribe__mark * Поля, обязательные для заполнения
+      .subscribe__check   
+      +Checkbox({
+          text: 'Я согласен на получение ',
+      })
+      a(href="#") рекламно-информационных рассылок 
+        

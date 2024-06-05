@@ -1,0 +1,18 @@
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  row-gap: 17px;
+
+  &__row {
+    display: flex;
+    column-gap: 24px;
+    .input {
+      max-width: 232px;
+      border-radius: 10px;
+    }
+    .btn {
+      max-width: 232px;
+      width: 100%;
+    }
+  }
+}
