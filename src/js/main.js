@@ -127,7 +127,7 @@ if (document.documentElement.clientWidth < 1270) {
     },
     breakpoints: {
       700: {
-        slidesPerView: '3',
+        slidesPerView: '2.8',
         spaceBetween: 10,
       },
       500: {
@@ -136,7 +136,6 @@ if (document.documentElement.clientWidth < 1270) {
       },
       300: {
         slidesPerView: '1',
-        spaceBetween: 0,
       },
     },
   });
