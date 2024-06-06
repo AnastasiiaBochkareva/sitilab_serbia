@@ -12,18 +12,45 @@
     max-width: 1200px;
   }
   @include lg {
-    max-width: 990px;
+    // max-width: 990px;
     // max-width: 960px;
+    max-width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   @include md {
-    max-width: 990px;
+    // max-width: 990px;
   }
   @include sm {
-    max-width: 940px;
+    // max-width: 940px;
   }
   @include xs {
     max-width: 100%;
     padding-left: 30px;
     padding-right: 30px;
+  }
+}
+.container-slider {
+  width: 100%;
+  max-width: 1180px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include xl {
+    max-width: 1200px;
+  }
+  @include lg {
+    max-width: 100%;
+    padding-left: 30px;
+  }
+  @include md {
+    // max-width: 990px;
+  }
+  @include sm {
+    // max-width: 940px;
+  }
+  @include xs {
+    max-width: 100%;
+    padding-left: 30px;
   }
 }

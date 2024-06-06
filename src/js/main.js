@@ -183,3 +183,36 @@ const mainReview = new Swiper('.main-review__slider', {
     },
   },
 });
+
+const article = new Swiper('.article__slider ', {
+  modules: [Navigation, Pagination, Autoplay],
+  slidesPerView: '4',
+  spaceBetween: 20,
+  observer: true,
+  observeParents: true,
+  observeSlideChildren: true,
+  grabCursor: true,
+  breakpoints: {
+    1440: {
+      slidesPerView: '4',
+      spaceBetween: 20,
+    },
+    1000: {
+      slidesPerView: '4',
+    },
+    900: {
+      slidesPerView: '3.5',
+    },
+    600: {
+      slidesPerView: '2.5',
+    },
+    376: {
+      slidesPerView: '1.5',
+      spaceBetween: 10,
+    },
+    300: {
+      slidesPerView: '1.1',
+      spaceBetween: 10,
+    },
+  },
+});

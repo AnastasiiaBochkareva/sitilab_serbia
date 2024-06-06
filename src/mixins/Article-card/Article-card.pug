@@ -1,0 +1,13 @@
+mixin Article-card(param={})
+  .article-card
+    .article-card__img
+      if (param.imgOne)
+        img(src="/assets/img/categories/article1.png", alt="")
+      if (param.imgTwo)
+        img(src="/assets/img/categories/article2.png", alt="")
+      if (param.imgThree)
+        img(src="/assets/img/categories/article3.png", alt="")
+    .article-card__date=param.date
+    .article-card__title.subtitle=param.title
+    .article-card__subtitle.subtitle-sm=param.subtitle
+    a(href="#").article-card__link.text-blue Читать полностью
