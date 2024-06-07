@@ -90,11 +90,20 @@
   color: rgb(0, 171, 223);
 }
 .bg-blue {
-  background-color: #e6f8fd;
+  background-color: #e6f8fd !important;
 }
 .bg-light-blue {
   background-color: #e6f8fd;
 }
 .bg-dark-blue {
-  background-color: #00abdf;
+  background-color: #00abdf !important;
+}
+.bg-red {
+  background-color: #ea516d !important;
+}
+.bg-green {
+  background-color: #05a8b3 !important;
+}
+.bg-purpure {
+  background-color: #ba66d8 !important;
 }
