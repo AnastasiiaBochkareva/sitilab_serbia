@@ -73,6 +73,15 @@
       stroke: #00abdf;
       fill: none;
     }
+    &:hover {
+      background-color: transparent !important;
+      color: #00abdf !important;
+      text-decoration: underline;
+      svg {
+        stroke: #00abdf !important;
+        fill: none !important;
+      }
+    }
   }
   @include lg {
     // .d-lg-block {
@@ -122,6 +131,15 @@
       margin-top: 14px;
       padding: 9px 15px;
       border: 1.5px solid #00abdf;
+      &:hover {
+        background-color: #00abdf !important;
+        color: #fff !important;
+        text-decoration: none;
+        svg {
+          stroke: #fff !important;
+          fill: #00abdf !important;
+        }
+      }
     }
   }
 }

@@ -27,6 +27,7 @@
       input {
         border-radius: 10px;
       }
+
       &::after {
         border: 1px solid #8e9aab;
         border-radius: 10px;
@@ -51,6 +52,12 @@
     line-height: 150.04%;
     letter-spacing: -1%;
   }
+  &__link {
+    &:hover {
+      text-decoration: underline;
+      color: rgb(0, 171, 223);
+    }
+  }
   &__check {
     display: flex;
     align-items: center;
@@ -64,6 +71,12 @@
       &::before {
         border-radius: 3px;
         border: 1px solid #8e9aab;
+        border-color: #8e9aab !important;
+      }
+    }
+    &:hover {
+      .checkbox__label {
+        color: rgb(59, 75, 100);
       }
     }
   }
