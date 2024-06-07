@@ -32,7 +32,7 @@
       }
     }
   }
-  @media (max-width: 800px) {
+  @include lg {
     &_prev,
     &_next {
       display: none;
