@@ -6,17 +6,21 @@ mixin Header(param = {})
     .container.header__container
       .header__logo
         img(src="/assets/img/categories/main-logo.png" alt="logo")
-
-      .header__contacts 
-        .header__mark
-          +icon('mark')
-          span Сербия, Белград
-        .header__phone
-          +icon('phone')
-          span +381-11-777-3777
+      .header__search 
+        form(action='')
+          button(type='submit')
+            +icon('search')
+          label
+            input(type='text' name='header-search' placeholder='Поиск')
+      .header__mark
+        +icon('mark')
+        span Сербия, Белград
+      .header__phone
+        +icon('phone')
+        span +381-11-777-3777
 
       ul.header__nav 
-        each el in ['Акции', 'О нас', 'Контакты']
+        each el in ['О нас', 'Спроси врача', 'Контакты']
           li
             a(href="#")=el
 
@@ -38,16 +42,15 @@ mixin Header(param = {})
               span English
 
 
-      .header__controles
-        button.btn.btn_secondary.header__btn 
-          img(src="/assets/img/categories/flag-ru.png" alt="flag-ru")
-          span для граждан России
-        button.btn.btn_primary.header__btn
-          +icon('file')
-          span Прайс-Лист
-        button.header__burger(data-my-modal='#mobile-menu').active
-          +icon('burger')
-        button.header__burger(data-my-modal-close='#mobile-menu')
-          +icon('close')
+      button.btn.btn_secondary.header__btn 
+        img(src="/assets/img/categories/flag-ru.png" alt="flag-ru")
+        span для граждан России
+      button.btn.btn_primary.header__btn
+        +icon('file')
+        span Анализы
+      button.header__burger(data-my-modal='#mobile-menu').active
+        +icon('burger')
+      button.header__burger(data-my-modal-close='#mobile-menu')
+        +icon('close')
 
       
