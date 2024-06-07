@@ -72,3 +72,59 @@ ul {
   height: 24px;
   fill: #00abdf;
 }
+
+.analysis {
+  &__title {
+    font-size: 32px;
+    line-height: 38px; /* 126.316% */
+    letter-spacing: -2px;
+    text-align: center;
+    padding-top: 25px;
+  }
+  &__pages {
+    padding-top: 50px;
+    padding-bottom: 148px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+    a {
+      text-decoration: none;
+      color: #3b4b64;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 28px; /* 126.316% */
+      letter-spacing: 0;
+      svg {
+        transform: rotate(270deg);
+        width: 14px;
+        height: 8px;
+      }
+      &:hover {
+        color: rgb(0, 171, 223);
+      }
+    }
+    &__pages-number,
+    .active {
+      color: rgb(0, 171, 223);
+    }
+  }
+  @include xs {
+    &__title {
+      text-align: left;
+      padding-top: 15px;
+      font-size: 22px;
+      line-height: 32px;
+    }
+    &__pages {
+      column-gap: 40px;
+    }
+  }
+  @media (max-width: 340px) {
+    &__pages {
+      column-gap: 25px;
+      padding-bottom: 95px;
+    }
+  }
+}

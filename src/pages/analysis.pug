@@ -1,0 +1,28 @@
+extends ../templates/main
+
+block variables
+    - const title = 'Анализы'
+    - const description = 'Описание главной страницы'
+
+block content
+
+    section.container
+      +Breadcrumbs()
+
+    section.container 
+      .analysis__title.title Анализы в Сербии
+
+    section.section.container
+      +Analysis-list({})
+
+    section.container
+      .analysis__pages 
+        a(href="#").analysis__pages-number 1
+        a(href="#").analysis__pages-number.active 2
+        a(href="#").analysis__pages-number 3
+        a(href="#").analysis__pages-number.d-none.d-md-block 4
+        a(href="#").analysis__pages-number.d-none.d-md-block 5
+        a(href="#").analysis__pages-number ...
+        a(href="#").analysis__pages-number 25
+        a(href="#").analysis__pages-number
+          +icon('arrow-down')
