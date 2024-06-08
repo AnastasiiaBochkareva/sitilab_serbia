@@ -5,7 +5,7 @@ mixin Services-card(param={})
     .services-card__subtitle.subtitle-sm=param.subtitle
     if (param.subtitleTwo)
       .services-card__subtitle.subtitle-sm=param.subtitleTwoText
-    button.btn.btn_secondary.services-card__btn(class=param.btnClasses)=param.btn
+    button.btn.btn_secondary.services-card__btn(data-my-modal='#callback', class=param.btnClasses)=param.btn
     if (param.btnMob)
       button.btn.btn_secondary.services-card__btn(class=param.btnClassesMob)=param.btnMobText
     if (param.file)

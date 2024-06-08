@@ -1,0 +1,18 @@
+mixin Popup-callback(param={})
+    +slot('head') Задай вопрос врачу совершенно бесплатно 
+    +slot('body')
+      form.form
+        +Input({ type: 'text', placeholder: 'Фамилия' })
+        +Input({ type: 'text', placeholder: 'Имя *' })
+        +Input({ type: 'text', placeholder: '+381 __-___-____ *' })
+        +Input({ type: 'text', placeholder: 'E-mail*' })
+        +Input({ type: 'text', placeholder: 'Введите ваш вопрос *' })
+        .accept
+          .accept__mark * Поля, обязательные для заполнения
+          .accept__check   
+            +Checkbox({
+                text: 'Я согласен на обработку ',
+            })
+            a(href="#").accept__link персональных данных 
+    +slot('footer')
+        button(type="submit" data-my-modal-submit).btn.btn_primary.bg-red Получить консультацию

@@ -4,6 +4,7 @@
 .header {
   display: flex;
   position: relative;
+  border-bottom: 1px solid rgb(178, 186, 198);
   &__logo {
     max-width: 200px;
     width: 100%;
@@ -110,6 +111,7 @@
     }
   }
   &__lang {
+    z-index: 400;
     display: flex;
     align-items: center;
     column-gap: 7px;
@@ -190,12 +192,6 @@
   }
   &__burger {
     display: none;
-    &.active {
-      display: flex;
-    }
-    &[data-my-modal-close]:not(.active) ~ .header__burger {
-      display: flex !important;
-    }
   }
   &__btn {
     max-width: 240px;
@@ -327,7 +323,7 @@
       grid-row-end: 3;
 
       &.active {
-        display: flex;
+        display: flex !important;
       }
       &[data-my-modal-close]:not(.active) ~ .header__burger {
         display: flex !important;
@@ -338,7 +334,8 @@
       }
     }
   }
-
+  @include sm {
+  }
   @include xs {
     border-bottom: 1px solid var(--gray1, #b2bac6);
     &__container {

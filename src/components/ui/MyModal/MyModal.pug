@@ -49,3 +49,16 @@ mixin MyModal(param = {})
             if slots['footer']
                 .my-modal__footer
                     - slots['footer']();
+        if (param.success)
+          .my-modal__success
+            .my-modal__head-close
+              button(data-my-modal-close).btn.btn_square
+                  +icon('close')
+            .my-modal__success_icon
+              +icon('success')
+            .my-modal__success_title Готово!
+            .my-modal__success_subtitle Наш специалист свяжется с вами в ближайшее время.
+            img(src="/assets/img/categories/ellipse.png", alt="").my-modal__success_img  
+            
+                    
+

@@ -10,6 +10,7 @@
   }
   &__cell {
     display: flex;
+    align-items: center;
     column-gap: 24px;
     .btn {
       font-family: 'Montserrat', sans-serif;
@@ -72,6 +73,7 @@
     align-items: center;
     &__label {
       color: rgb(59, 75, 100);
+      line-height: 25px;
       &::before {
         border-radius: 3px;
         border: 1px solid #8e9aab;
@@ -87,6 +89,7 @@
   @include lg {
     grid-template-columns: repeat(1, 1fr);
     row-gap: 26px;
+    padding-bottom: 80px;
     &__title {
       line-height: 32px;
       display: flex;
@@ -106,7 +109,7 @@
       }
     }
   }
-  @include xs {
+  @media (max-width: 810px) {
     &__cell {
       flex-wrap: wrap;
       row-gap: 20px;
@@ -124,56 +127,57 @@
       padding-left: 35px;
     }
   }
-}
-.success {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  row-gap: 6px;
-  padding-top: 37px;
-  padding-bottom: 38px;
-  .title-sm {
-    margin-bottom: 14px;
-    z-index: 100;
-  }
-  .subtitle-sm {
-    font-weight: 500;
-    line-height: 14px;
-    letter-spacing: -1%;
-    line-height: 150.04%;
-    text-align: center;
-    z-index: 100;
-  }
-  svg {
-    width: 183px;
-    height: 136px;
-    position: absolute;
-    fill: rgb(220, 243, 190);
-    z-index: 50;
-    right: 33%;
-    top: 0;
-    // right: 385px;
-  }
-  @include lg {
-    svg {
-      right: 28%;
-    }
-  }
-  @include sm {
-    padding-top: 100px;
-    padding-bottom: 183px;
-    row-gap: 20px;
+  &__success {
+    display: none;
+    // display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    row-gap: 6px;
+    padding-top: 37px;
+    padding-bottom: 38px;
     .title-sm {
-      margin-bottom: 10px;
-      font-size: 28px;
+      margin-bottom: 14px;
+      z-index: 100;
+    }
+    .subtitle-sm {
+      font-weight: 500;
+      line-height: 14px;
+      letter-spacing: -1%;
+      line-height: 150.04%;
+      text-align: center;
+      z-index: 100;
     }
     svg {
-      width: 216px;
-      height: 168px;
-      right: -56px;
-      top: 231px;
+      width: 183px;
+      height: 136px;
+      position: absolute;
+      fill: rgb(220, 243, 190);
+      z-index: 50;
+      right: 33%;
+      top: 0;
+      // right: 385px;
+    }
+    @include lg {
+      svg {
+        right: 28%;
+      }
+    }
+    @include sm {
+      padding-top: 100px;
+      padding-bottom: 183px;
+      row-gap: 20px;
+      .title-sm {
+        margin-bottom: 10px;
+        font-size: 28px;
+      }
+      svg {
+        width: 216px;
+        height: 168px;
+        right: -56px;
+        top: 231px;
+      }
     }
   }
 }

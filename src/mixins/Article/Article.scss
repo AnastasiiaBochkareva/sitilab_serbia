@@ -15,15 +15,15 @@
   }
   &__link {
     text-decoration: none;
-    // position: absolute;
-    // right: 0;
-    // top: 10px;
     margin-left: auto;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 18px; /* 126.316% */
     letter-spacing: -2%;
+  }
+  a:hover {
+    color: rgb(0, 171, 223);
   }
   &__slider {
     overflow: hidden;
