@@ -1,11 +1,19 @@
-mixin Breadcrumbs()
+mixin Breadcrumbs(param={})
     ul.breadcrumbs
 
         li.breadcrumbs__item
             a(href='./').breadcrumbs__link Главная
-
-        li.breadcrumbs__item
-            a(href='./').breadcrumbs__link Анализы
+        if (param.analysis)
+          li.breadcrumbs__item
+              .breadcrumbs__link Анализы
+        if (param.articles)
+          li.breadcrumbs__item
+              .breadcrumbs__link Статьи
+        if (param.article)
+          li.breadcrumbs__item
+              a(href='./').breadcrumbs__link Статьи
+          li.breadcrumbs__item
+              .breadcrumbs__link Эндометриоз у женщин: причины
 
         //- - for (let i = 0; i < 3; i++)
         //-     li.breadcrumbs__item

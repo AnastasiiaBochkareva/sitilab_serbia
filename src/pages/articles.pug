@@ -1,0 +1,34 @@
+extends ../templates/main
+
+block variables
+    - const title = 'Анализы'
+    - const description = 'Описание главной страницы'
+
+block content
+
+  main.articles-page
+    section.container
+      +Breadcrumbs({
+        articles: true
+      })
+
+    section.section.container
+      .article__all-cards
+        +Article-card({
+          imgOne: true,
+          date: '01.10.2023',
+          title: 'Эндометриоз у женщин: причины, симптомы, диагностика, лечение',
+          subtitle: 'Эндометриоз у женщин представляет собой процесс разрастания доброкачественной ткани, которая схожа...'
+        })
+        +Article-card({
+          imgTwo: true,
+          date: '25.09.2023',
+          title: 'Дисбактериоз кишечника: причины, симптомы, диагностика, лечение',
+          subtitle: 'Дисбактериоз – качественное и количественное изменение микрофлоры в организме на любом его...'
+        })
+        +Article-card({
+          imgThree: true,
+          date: '18.09.2023',
+          title: 'Инсульт: причины, признаки, диагностика, лечение',
+          subtitle: 'Инсульт – острое нарушение мозгового кровообращения (ОНМК), инфаркт мозга – это внезапно возникшее...'
+        })

@@ -17,7 +17,7 @@
     // transition: color $transition;
     white-space: nowrap;
     &:last-of-type {
-      a {
+      .breadcrumbs__link {
         color: rgb(59, 75, 100);
       }
     }
@@ -94,7 +94,7 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 500;
-    line-height: 28px; /* 126.316% */
+    line-height: 5px; /* 126.316% */
     letter-spacing: -2%;
   }
 
@@ -115,7 +115,7 @@
       // padding: 6px 10px;
       // border-radius: 20px;
       font-size: 14px;
-      line-height: 32px; /* 126.316% */
+      line-height: 5px; /* 126.316% */
     }
 
     // &__item {
@@ -146,7 +146,8 @@
 }
 
 a.breadcrumbs__link:hover {
-  color: $text-5;
+  // color: $text-5;
+  color: rgb(59, 75, 100);
   text-decoration: none;
 }
 
