@@ -3,7 +3,11 @@
   grid-template-columns: 381px 1fr;
   column-gap: 22px;
   row-gap: 17px;
-
+  .subtitle-sm {
+    font-weight: 500;
+    line-height: 150.04%;
+    letter-spacing: -1%;
+  }
   &__cell {
     display: flex;
     column-gap: 24px;
@@ -118,6 +122,51 @@
   @media (max-width: 536px) {
     &__link {
       padding-left: 35px;
+    }
+  }
+}
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  row-gap: 6px;
+  .title-sm {
+    margin-bottom: 14px;
+  }
+  .subtitle-sm {
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: -1%;
+    line-height: 150.04%;
+    text-align: center;
+  }
+  svg {
+    border: 1px solid black;
+    width: 183px;
+    height: 136px;
+    position: absolute;
+    right: 33%;
+    // right: 385px;
+  }
+  @include lg {
+    svg {
+      right: 28%;
+    }
+  }
+  @include sm {
+    padding-top: 100px;
+    padding-bottom: 183px;
+    row-gap: 20px;
+    .title-sm {
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+    svg {
+      width: 203px;
+      height: 168px;
+      right: -40px;
     }
   }
 }

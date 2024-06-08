@@ -274,6 +274,7 @@
       grid-column-start: 2;
       grid-column-end: 3;
       grid-row-start: 1;
+      grid-row-end: 2;
       column-gap: 6px;
       svg {
         fill: #ea516d;
@@ -346,6 +347,7 @@
     }
     &__logo {
       max-width: 70px;
+      height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
