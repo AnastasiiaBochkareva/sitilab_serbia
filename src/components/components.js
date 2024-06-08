@@ -15,6 +15,7 @@
 
 import '@/mixins/Header/Header';
 import '@/mixins/Btn-callback/Btn-callback';
+import '@/mixins/Btn-up/Btn-up';
 
 import MyModal from '@/components/ui/MyModal/MyModal';
 // import Filters from '@/components/ui/Filters/Filters';
