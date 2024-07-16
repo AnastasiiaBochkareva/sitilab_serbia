@@ -56,6 +56,9 @@ $ui-purple12: rgba(101, 84, 192, 0.12);
     display: none;
   }
 }
+.sidebar-sm {
+  @include hideScroll;
+}
 
 @mixin card {
   background: $ui-white;

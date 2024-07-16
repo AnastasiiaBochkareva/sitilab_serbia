@@ -1,0 +1,45 @@
+.invite{
+    border-radius: 20px;
+    border: 1px solid #B2BAC6;
+    padding: 28px 30px 30px;
+    max-width: 337px;
+    width: 100%;
+    
+    .subtitle{
+        margin-bottom: 26px;
+        line-height: 20px;
+        color: rgb(59, 75, 100);
+    }
+    &__tel, &__adress{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -2%;
+        color: rgb(59, 75, 100);
+    }
+    &__tel{
+        
+        margin-bottom: 14px;
+    }
+    &__adress{
+        background-color: rgb(249, 255, 238);
+        border-radius: 5px;
+        width: 100%;
+        max-width: 277px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        padding: 10px 12px;
+        gap: 11px;
+        margin-bottom: 28px;
+        svg{
+            width: 14px;
+            height: 18px;
+        }
+    }
+    &__btn{
+        max-width: 100%;
+        width: 100%;
+    }
+}

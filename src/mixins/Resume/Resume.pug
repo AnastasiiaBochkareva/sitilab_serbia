@@ -1,0 +1,20 @@
+mixin Resume(param={})
+    .resume      
+        .resume__img
+            img(src="/assets/img/categories/resume.png", alt="")
+        .resume__about
+            .tags.subtitle 
+                span Акушер
+                span Врач узи
+                span Гинеколог
+            .title-sm Ольга Николаевна Шляховская
+            .rank.text-blue.bg-light-blue Врач высшей категории
+            .experience Стаж: более 28 лет
+            .rating
+                div
+                    each el in Array(5)
+                        +icon('star')
+                span 5 отзывов
+        .resume__invite
+            +Invite({})
+        

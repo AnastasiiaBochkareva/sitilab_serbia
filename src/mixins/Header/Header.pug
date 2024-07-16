@@ -20,7 +20,7 @@ mixin Header(param = {})
         span +381-11-777-3777
 
       ul.header__nav 
-        each el in ['О нас', 'Спроси врача', 'Контакты']
+        each el in ['О нас', 'Анализы', 'Врач', 'Контакты']
           li
             a(href="#")=el
 
@@ -45,9 +45,7 @@ mixin Header(param = {})
       button.btn.btn_secondary.header__btn 
         img(src="/assets/img/categories/flag-ru.png" alt="flag-ru")
         span для граждан России
-      button.btn.btn_primary.header__btn
-        +icon('file')
-        span Анализы
+      button.btn.btn_primary.header__btn  +381-655-737-777
       button.header__burger(data-my-modal='#mobile-menu').active
         +icon('burger')
       button.header__burger(data-my-modal-close='#mobile-menu')

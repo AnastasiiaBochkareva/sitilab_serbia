@@ -4,6 +4,13 @@ mixin Popup-callback(param={})
       form.form
         +Input({ type: 'text', placeholder: 'Фамилия' })
         +Input({ type: 'text', placeholder: 'Имя *' })
+        .choosing_male Пол:
+          +Radio({
+            text: 'женский'
+          })
+          +Radio({
+            text: 'мужской'
+          })
         +Input({ type: 'text', placeholder: '+381 __-___-____ *' })
         +Input({ type: 'text', placeholder: 'E-mail*' })
         +Input({ type: 'text', placeholder: 'Введите ваш вопрос *' })

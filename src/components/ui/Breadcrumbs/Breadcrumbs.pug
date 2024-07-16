@@ -13,8 +13,10 @@ mixin Breadcrumbs(param={})
           li.breadcrumbs__item
               a(href='./').breadcrumbs__link Статьи
           li.breadcrumbs__item
-              .breadcrumbs__link Эндометриоз у женщин: причины
-
+              .breadcrumbs__link Эндометриоз у женщин: причины, симптомы, диагностика, лечение 
+        if(param. doctors)
+            li.breadcrumbs__item
+              .breadcrumbs__link О враче
         //- - for (let i = 0; i < 3; i++)
         //-     li.breadcrumbs__item
         //-         a(href='./').breadcrumbs__link Категория #{i+1}

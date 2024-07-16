@@ -2,32 +2,51 @@
   .main-services__img
     img(src="/assets/img/categories/doctor.png", alt="", class='main-services__img-desktop')
     img(src="/assets/img/categories/doctor-mob.png", alt="", class='main-services__img-mobile')
-  .main-services__info
-    .main-services__title
-      img(src="/assets/img/categories/flag-ru.png", alt="")
-      .title-sm Спроси врача
-      .main-services__promo.subtitle-sm Бесплатно
-    .main-services__subtitle.subtitle.text-blue Сервис медицинской поддержки для русскоговорящих пациентов
-  .main-services__cards
-    +Services-card({
-          number: '1.',
-          title: 'Расшифровка результатов анализов',
-          subtitle: 'Опытные врачи помогут грамотно интерпретировать результаты анализов.',
-          subtitleTwo: true,
-          subtitleTwoText: 'Услуга бесплатная, доступна для всех клиентов сети медицинских лабораторий ситилаб.',
-          btn: 'Расшифровать результаты',
-          btnClasses: 'services-card__btn-desktop'
-        })
-    +Services-card({
-          number: '2.',
-          title: 'Помощь в выборе анализов и подготовка к сдаче',
-          subtitle: 'Не уверены, какие анализы нужно сдать? специалист проконсультирует и поможет сделать правильный выбор. также расскажет, как правильно подготовиться к сдаче анализов. от соблюдения рекомендаций может зависеть точность результатов.',
-          btn: 'Задать вопрос врачу',
-          file: true,
-          btnMob: true,
-          btnMobText: 'Расшифровать результаты',
-          btnClassesMob: 'services-card__btn-mobile',
-        })
+  //- .main-services__info
+  //-   .main-services__title
+  //-     img(src="/assets/img/categories/flag-ru.png", alt="")
+  //-     .title-sm Спроси врача
+  //-     .main-services__promo.subtitle-sm Бесплатно
+  //-   .main-services__subtitle.subtitle.text-blue Сервис медицинской поддержки для русскоговорящих пациентов
+  //- .main-services__cards
+  //-   +Services-card({
+  //-         number: '1.',
+  //-         title: 'Расшифровка результатов анализов',
+  //-         subtitle: 'Опытные врачи помогут грамотно интерпретировать результаты анализов.',
+  //-         subtitleTwo: true,
+  //-         subtitleTwoText: 'Услуга бесплатная, доступна для всех клиентов сети медицинских лабораторий ситилаб.',
+  //-         btn: 'Расшифровать результаты',
+  //-         btnClasses: 'services-card__btn-desktop'
+  //-       })
+  //-   +Services-card({
+  //-         number: '2.',
+  //-         title: 'Помощь в выборе анализов и подготовка к сдаче',
+  //-         subtitle: 'Не уверены, какие анализы нужно сдать? специалист проконсультирует и поможет сделать правильный выбор. также расскажет, как правильно подготовиться к сдаче анализов. от соблюдения рекомендаций может зависеть точность результатов.',
+  //-         btn: 'Задать вопрос врачу',
+  //-         file: true,
+  //-         btnMob: true,
+  //-         btnMobText: 'Расшифровать результаты',
+  //-         btnClassesMob: 'services-card__btn-mobile',
+  //-       })
+
+  .main-services__head
+    .title-sm Помощь в выборе анализов и подготовка к сдаче
+    .main-services__subtitle.text-blue Сервис медицинской поддержки для русскоговорящих пациентов
+  .main-services__body
+    .main-services__row.mb-25
+      .number 1
+      .subtitle Не уверены, какие анализы нужно сдать?
+    .main-services__row.mb-8
+      .number 2
+      .subtitle Как правильно подготовиться к сдаче анализов. 
+    .subtitle-sm.move-block От соблюдения рекомендаций может зависеть точность результатов.  
+    .subtitle-sm Специалист проконсультирует и поможет сделать правильный выбор.
+    .main-services__btns
+      button.btn.btn_secondary.main-services__btn(data-my-modal='#callback') Получить консультацию
+      button.btn.btn_primary.main-services__file Список доступных тестов
+        +icon('file')
+
+
 
 // блок с вопросами врачу 1й вариант
   //- .main-services__info

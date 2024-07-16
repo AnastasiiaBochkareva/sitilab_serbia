@@ -1,0 +1,56 @@
+extends ../templates/main
+
+block variables
+    - const title = 'Анализы'
+    - const description = 'Описание главной страницы'
+
+block content
+
+    main.doctors-page
+        section.container
+            +Breadcrumbs({
+                doctors: true
+            })
+
+        section.container.section
+            +Resume({})
+        
+        section.container.section.doctors-page__wrapper
+            +Sidebar-sm()
+            .doctors-page__content
+            
+                .doctors-block
+                    +Doctor-info({
+                        blockOne: true,
+                        listSm: true,
+                    })
+                
+                .doctors-block
+                    +Doctor-info({
+                        blockTwo: true,
+                    })
+                
+                .doctors-block
+                    +Doctor-info({
+                        blockThree: true,
+                    })
+                
+                .doctors-block
+                    +Doctor-info({
+                        blockFour: true,
+                    })
+                
+                .doctors-block
+                    +Doctor-info({
+                        blockFive: true,
+                    })
+                
+                .doctors-block
+                    +Doctor-info({
+                        blockSix: true,
+                    })
+                
+                .doctors-block
+                    +Doctor-info({
+                        blockSeven: true,
+                    })

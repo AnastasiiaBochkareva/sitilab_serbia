@@ -162,13 +162,14 @@ const mainReview = new Swiper('.main-review__slider', {
     delay: 5000, // задержка между слайдами в миллисекундах (в данном случае 5 секунд)
     disableOnInteraction: false, // оставлять ли автопрокрутку после взаимодействия пользователя с слайдером
   },
+  loop: true,
   breakpoints: {
-    1440: {
+    1270: {
       slidesPerView: '4',
       spaceBetween: 20,
     },
     1000: {
-      slidesPerView: '3',
+      slidesPerView: '3.5',
     },
     900: {
       slidesPerView: '2.5',
@@ -176,9 +177,12 @@ const mainReview = new Swiper('.main-review__slider', {
     600: {
       slidesPerView: '2',
     },
+    374: {
+      slidesPerView: '1.3',
+      spaceBetween: 10,
+    },
     300: {
       slidesPerView: '1',
-      spaceBetween: 10,
     },
   },
 });

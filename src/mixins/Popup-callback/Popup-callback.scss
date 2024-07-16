@@ -1,0 +1,35 @@
+.form{
+    .choosing_male{
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        color: #fff;
+        .radio{
+            &:hover span:before {
+                border-color: rgb(0, 171, 223) !important;
+            }
+            input{
+                width: 10px;
+                height: 10px;
+                background-color: #fff;
+            }
+            span{
+                color: #fff !important;
+            }
+            input:checked + span:after{
+                background-color: rgb(0, 171, 223) !important;
+                width: 11px;
+                height: 11px;
+                left: 4.6px;
+            }
+            input:checked + span:before {
+                border-color: rgb(0, 171, 223) !important;
+            }
+        }
+    }
+    @include xs{
+        .choosing_male{
+            column-gap: 15px;
+        }
+    }
+}
