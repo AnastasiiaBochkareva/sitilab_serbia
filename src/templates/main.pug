@@ -16,9 +16,19 @@ html(lang='ru')
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    body.t-body
-        +Header()
+    body.t-body(class=headerWhite ? 'bg-blue-gradient' : '')
+        if (!headerWhite)
+            +Header()
+        else 
+            +Header({
+                headerWhite: true,
+            })
         block content
-        +Btn-callback()
-        +Footer()
+        if btnCallback !== false
+            +Btn-callback()
+        if includeFooter !== false
+            +Footer()
         include ../pages/_modals
+    
+        block bodyAttributes
+            //- Пустой блок для возможности дополнения атрибутов

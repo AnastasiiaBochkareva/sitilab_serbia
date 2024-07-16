@@ -2,53 +2,67 @@
 //include catalog
 
 mixin Header(param = {})
-  .header
-    .container.header__container
-      .header__logo
-        img(src="/assets/img/categories/main-logo.png" alt="logo")
-      .header__search 
-        form(action='')
-          button(type='submit')
-            +icon('search')
-          label
-            input(type='text' name='header-search' placeholder='Поиск')
-      .header__mark
-        +icon('mark')
-        span Сербия, Белград
-      .header__phone
-        +icon('phone')
-        span +381-11-777-3777
+  if(!param.headerWhite)
+    .header
+      .container.header__container
+        .header__logo
+          img(src="/assets/img/categories/main-logo.png" alt="logo")
+        .header__search 
+          form(action='')
+            button(type='submit')
+              +icon('search')
+            label
+              input(type='text' name='header-search' placeholder='Поиск')
+        .header__mark
+          +icon('mark')
+          span Сербия, Белград
+        .header__phone
+          +icon('phone')
+          span +381-11-777-3777
 
-      ul.header__nav 
-        each el in ['О нас', 'Анализы', 'Врач', 'Контакты']
-          li
-            a(href="#")=el
+        ul.header__nav 
+          each el in ['О нас', 'Анализы', 'Врач', 'Контакты']
+            li
+              a(href="#")=el
 
-      button.header__lang 
-        .header__lang_type Ru
-        +icon('arrow-down')
-        ul.header__lang_choosing 
-          li
-            a(href="#") 
-              img(src="/assets/img/categories/flag-ru.png" alt="flag-ru")
-              span Русский
-          li
-            a(href="#") 
-              img(src="/assets/img/categories/flag-srb.png" alt="flag-srb")
-              span Srpski
-          li
-            a(href="#") 
-              img(src="/assets/img/categories/flag-eng.png" alt="flag-eng")
-              span English
+        button.header__lang 
+          .header__lang_type Ru
+          +icon('arrow-down')
+          ul.header__lang_choosing 
+            li
+              a(href="#") 
+                img(src="/assets/img/categories/flag-ru.png" alt="flag-ru")
+                span Русский
+            li
+              a(href="#") 
+                img(src="/assets/img/categories/flag-srb.png" alt="flag-srb")
+                span Srpski
+            li
+              a(href="#") 
+                img(src="/assets/img/categories/flag-eng.png" alt="flag-eng")
+                span English
 
 
-      button.btn.btn_secondary.header__btn 
-        img(src="/assets/img/categories/flag-ru.png" alt="flag-ru")
-        span для граждан России
-      button.btn.btn_primary.header__btn  +381-655-737-777
-      button.header__burger(data-my-modal='#mobile-menu').active
-        +icon('burger')
-      button.header__burger(data-my-modal-close='#mobile-menu')
-        +icon('close')
+        button.btn.btn_secondary.header__btn 
+          img(src="/assets/img/categories/flag-ru.png" alt="flag-ru")
+          span для граждан России
+        button.btn.btn_primary.header__btn  +381-655-737-777
+        button.header__burger(data-my-modal='#mobile-menu').active
+          +icon('burger')
+        button.header__burger(data-my-modal-close='#mobile-menu')
+          +icon('close')
+
+  else
+    .header.header-white
+      .container.header__container
+        .header__logo
+          img(src="/assets/img/categories/main-logo-white.png" alt="logo")
+        .header__mark
+          +icon('mark')
+          span Сербия, Белград
+        .header__phone
+          +icon('phone')
+          span +381-11-777-3777
+
 
       

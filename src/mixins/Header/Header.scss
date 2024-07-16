@@ -469,3 +469,71 @@
     // }
   }
 }
+.header-white{
+  border-bottom: none !important;
+  .header{
+    &__mark, &__phone{
+      color: #fff;
+      display: flex;
+      font-size: 18px;
+      line-height: 32px;
+      grid-row-start: 1;
+      svg{
+        fill: #fff;
+      }
+    }
+    &__mark{
+      margin-left: auto;
+    }
+    &__container{
+      display: flex;
+      gap: 40px;
+    }
+    @include lg{
+      &__phone{
+        svg{
+          display: none;
+        }
+      }
+    }
+    @include md{
+      &__mark, &__phone{
+        svg{
+          display: none;
+        }
+      }
+    }
+    @include xs{
+      &__container{
+        display: grid;
+        grid-template-columns: 1fr 130px;
+        row-gap: 7px;
+      }
+      &__logo{
+        max-width: 100px;
+        height: 30px;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        align-self: center;
+        img{
+          width: 100px;
+          height: 30px;
+        }
+      }
+      &__mark{
+        grid-row-start: 1;
+      }
+      &__phone{
+        grid-row-start: 2;
+      }
+      &__mark, &__phone{
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 500;
+        justify-content: flex-end;
+      }
+    }
+  }
+}

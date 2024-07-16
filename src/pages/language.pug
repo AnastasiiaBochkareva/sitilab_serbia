@@ -1,0 +1,26 @@
+extends ../templates/main
+
+block variables
+    - const title = 'Выберите язык'
+    - const description = 'Описание главной страницы'
+    - const headerWhite = true
+    - const includeFooter = false
+    - const btnCallback = false
+
+block content
+
+    main.language-page
+        section.container
+            .language
+                .language__title.title-sm Выберите язык
+                .language__btns
+                    a(href="#").language__btn 
+                        img(src="/assets/img/categories/lang-ru.png", alt="")
+                        span Русский
+                    a(href="#").language__btn 
+                        img(src="/assets/img/categories/lang-srb.png", alt="")
+                        span Srpski
+                    a(href="#").language__btn 
+                        img(src="/assets/img/categories/lang-en.png", alt="")
+                        span English
+    append bodyAttributes(class='bg-blue-gradient')
