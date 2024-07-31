@@ -1,0 +1,16 @@
+mixin Analysis-list(param={})
+    div
+        if(param.title)
+            .subtitle=param.title
+        ul.tabb__block
+            if param.texts && param.texts.length
+                each text in param.texts
+                    if text
+                        li.subtitle-sm=text
+            //- li.subtitle-sm=param.textOne
+            //- li.subtitle-sm=param.textTwo
+            //- li.subtitle-sm=param.textThree
+            //- li.subtitle-sm=param.textFour
+            //- if(param.liSix)
+            //-     li.subtitle-sm=param.textFive
+            //-     li.subtitle-sm=param.textSix

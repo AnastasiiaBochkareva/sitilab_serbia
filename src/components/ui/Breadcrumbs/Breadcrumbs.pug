@@ -14,9 +14,14 @@ mixin Breadcrumbs(param={})
               a(href='./').breadcrumbs__link Статьи
           li.breadcrumbs__item
               .breadcrumbs__link Эндометриоз у женщин: причины, симптомы, диагностика, лечение 
-        if(param. doctors)
+        if(param.doctors)
             li.breadcrumbs__item
               .breadcrumbs__link О враче
+        if(param.analysisCard)
+            li.breadcrumbs__item
+                a(href='./').breadcrumbs__link Анализы
+            li.breadcrumbs__item
+              .breadcrumbs__link 25-OH Витамин D общий (25-гидроксикальциферол)
         //- - for (let i = 0; i < 3; i++)
         //-     li.breadcrumbs__item
         //-         a(href='./').breadcrumbs__link Категория #{i+1}

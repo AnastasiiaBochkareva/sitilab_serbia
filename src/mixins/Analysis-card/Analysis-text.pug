@@ -1,0 +1,13 @@
+mixin Analysis-text(param={})
+    div
+        if(param.title)
+            .subtitle=param.title
+        .tabb__block
+            if(param.rule)
+                .subtitle(style="margin-bottom: 0px;") Дефицит витамина D 
+                    .subtitle-sm – это состояние, характеризующееся снижением концентрации 25(ОН)D в сыворотке крови ниже оптимальных значений, которое может потенциально приводить к снижению всасывания кальция в кишечнике, развитию вторичного гиперпаратиреоза и повышению риска переломов, особенно у пожилых лиц.
+            else
+                if (param.texts && param.texts.length)
+                    each text in param.texts
+                        if text
+                            .subtitle-sm= text

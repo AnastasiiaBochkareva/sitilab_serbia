@@ -11,7 +11,7 @@
 // import '@/components/ui/Accordion/Accordion';
 // import '@/components/ui/СhoosingСity/ChoosingCity';
 // import '@/components/ui/scrollTo/scrollTo';
-// import '@/components/ui/Tabs/TabsNav';
+import '@/components/ui/Tabs/TabsNav';
 
 import '@/mixins/Header/Header';
 import '@/mixins/Btn-callback/Btn-callback';
