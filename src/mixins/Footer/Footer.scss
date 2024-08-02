@@ -5,7 +5,8 @@
     display: flex;
     column-gap: 20px;
     padding: 80px 0;
-    height: 356px;
+    // height: 356px;
+    height: 100%;
 
     position: relative;
   }
@@ -102,7 +103,7 @@
   }
   @include sm {
     .container {
-      height: 510px;
+      // height: 510px;
 
       flex-wrap: wrap;
     }

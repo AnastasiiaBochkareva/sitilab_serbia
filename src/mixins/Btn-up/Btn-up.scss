@@ -10,6 +10,7 @@
   justify-content: center;
   position: absolute;
   bottom: 331px;
+  // bottom: 100%;
   right: 0;
   &__text {
     display: none;
@@ -27,7 +28,8 @@
     row-gap: 4px;
     height: 32px;
     width: 56px;
-    bottom: 375px;
+    bottom: 105%;
+    // bottom: 375px;
     &__text {
       display: flex;
       color: rgb(0, 171, 223);
@@ -44,7 +46,7 @@
     }
   }
   @include sm {
-    bottom: 542px;
+    // bottom: 542px;
   }
   @include xs {
   }
