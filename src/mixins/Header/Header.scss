@@ -30,7 +30,6 @@
   &__phone {
     display: none;
     align-items: center;
-    // justify-content: space-between;
     column-gap: 10px;
     color: #3e3e3e;
     font-size: 12px;
@@ -42,6 +41,9 @@
     grid-column-start: 2;
     svg {
       display: none;
+    }
+    a{
+      color: #3e3e3e;
     }
   }
   &__container {
