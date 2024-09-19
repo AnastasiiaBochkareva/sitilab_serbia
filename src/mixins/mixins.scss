@@ -12,7 +12,7 @@
 @import '../components/ui/Pagination/Pagination';
 @import '../components/ui/Form/Form';
 // @import '../components/ui/Loading/Loading';
-// @import '../components/ui/Tabs/TabsNav';
+@import '../components/ui/Tabs/TabsNav';
 // @import '../components/ui/Table/Table';
 // @import '../components/ui/Filters/Filters';
 
@@ -40,5 +40,8 @@
 @import 'Sidebar-sm/Sidebar-sm';
 @import 'Doctor-info/Doctor-info';
 @import 'Other-articles/Other-articles';
+@import 'Analysis-text/Analysis-text';
 
 @import 'Cashback/Cashback';
+@import 'Sidebar-analysis/Sidebar-analysis';
+@import 'Analysis-row/Analysis-row';

@@ -2,5 +2,11 @@ mixin Main-menu(param={})
   .main-menu 
     ul.main-menu__list 
       each el in ['Для граждан России', 'Получить скидку', 'Акции', 'Контакты', 'Прайс лист']
-        li
+        li.main-menu__item
           a(href='#')=el
+            +icon('arrow-nav')
+          ul.main-menu__nav-dropdown
+            li.main-menu__dropdown-item
+                a(href="#") Врач гинеколог
+            li.main-menu__dropdown-item 
+                a(href="#") Врач уролог

@@ -1,0 +1,91 @@
+.a-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 30px 28px;
+    border-top: 1px solid rgb(178, 186, 198);
+    border-left: 1px solid rgb(178, 186, 198);
+    border-right: 1px solid rgb(178, 186, 198);
+    column-gap: 16px;
+    .a-subtitle {
+        font-weight: 500 !important;
+    }
+    &__type {
+        max-width: 687px;
+        width: calc(100% - 122px);
+        .a-title-sm {
+            text-align: left !important;
+            font-size: 20px !important;
+            line-height: 28px;
+            &:hover {
+                color: rgb(0, 171, 223) !important;
+            }
+        }
+    }
+
+    &__price {
+        padding: 10px 10px 8px;
+        background-color: rgb(230, 248, 253);
+        border-radius: 8px;
+        width: 100%;
+        height: 40px;
+        max-width: 122px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 22px;
+        letter-spacing: -2%;
+        color: rgb(59, 75, 100);
+        text-align: center;
+    }
+
+    // @media (max-width: 1440px) {
+    //     padding: 25px 38px 30px;
+
+    //     &__type {
+    //         .a-title-sm {
+    //             line-height: 22px !important;
+    //         }
+    //     }
+    //     .a-tags {
+    //         margin-top: 12px;
+    //     }
+    //     &__info {
+    //         &_btn {
+    //             min-width: 46px;
+    //             max-width: 46px;
+    //             width: 46px;
+    //             height: 46px;
+    //         }
+    //     }
+    // }
+    // @media (max-width: 1200px) {
+    //     // flex-direction: column;
+    //     row-gap: 20px;
+    //     // padding: 25px 0 30px;
+    //     &__type {
+    //         width: 100%;
+    //         max-width: 100%;
+    //     }
+    //     &__info {
+    //         width: 100%;
+    //         max-width: 100%;
+    //     }
+    // }
+    @media (max-width: 900px) {
+        border-left: none;
+        border-right: none;
+        padding: 25px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        &__type {
+            max-width: 100%;
+            width: 100%;
+            .a-title-sm {
+                font-size: 18px !important;
+            }
+        }
+        &__price {
+        }
+    }
+}

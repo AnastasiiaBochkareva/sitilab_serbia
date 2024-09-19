@@ -1,0 +1,11 @@
+mixin Analysis-row(param={})
+  if (param.aRowTitle)
+    .a-row-title
+      .a-title-sm.text-blue Женское здоровье (6)
+        .a-title-sm 12 
+  .a-row
+    .a-row__type
+      .a-subtitle.a-card-code=param.code
+      a(href="#").a-title-sm=param.title
+      .a-subtitle=param.subtitle
+    .a-row__price=param.infoPrice

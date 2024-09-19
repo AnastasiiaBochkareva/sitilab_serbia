@@ -1,0 +1,15 @@
+mixin Analysis-text(param={})
+  if (param.listTextTitle)
+    .a-title-sm=param.title
+  if (param.listText)
+    each el in param.text
+      p.a-subtitle=el
+  if (param.listTextUl)
+    ul 
+      each el in param.list
+        li.a-subtitle=el
+  if (param.listTextLinks)
+    each el in param.links
+      a(href="#").a-subtitle=el 
+  if (param.listTextLink)
+    a(href="#").a-subtitle.text-blue=param.link

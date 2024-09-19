@@ -6,25 +6,75 @@ block variables
 
 block content
 
+  .analysis.analysis-list
     section.container
       +Breadcrumbs({
         analysis: true
       })
 
-    section.container 
-      .analysis__title.title Анализы в Сербии
+    section.a-container
+        .a-title Анализы в Сербии
+        //- .a-show-more
+        //-     .a-show-more__btn   
+        //-       span Все разделы
+        .a-list__container
+            .a-list__head.sticky-tab
+                .sidebar-btn
+                    //- +icon('a-analysis')
+                    a Анализы по категориям
+                .a-row-title.text-blue Женское здоровье (6)
+                    //-   .a-title-sm 12 
+        .a-inner-container
+            +Sidebar-analysis({
+                analysisBtn: true,
+            })
+            .a-row-wrapper
+                +Analysis-row({
+                    aRowVnd: true,
+                    code: 'код: 11-10-001',
+                    title: 'Фемофлор 16. Исследование биоценоза урогенитального тракта женщин',
+                    infoPrice: '12 000 ₽',
+                })
+                +Analysis-row({
+                    code: 'код: 62-94-803',
+                    title: 'Фемофлор Скрин. Исследование биоценоза урогенитального тракта женщин',
+                    infoPrice: '525 ₽',
+                })
+                +Analysis-row({
+                    aRowVnd: true,
+                    code: 'код: 11-10-001',
+                    title: 'Фемофлор 16 + Фемофлор Скрин. Исследование биоценоза урогенитального тракта женщин',
+                    infoPrice: '525 ₽',
+                })
+                +Analysis-row({
+                    code: 'код: 62-94-803',
+                    title: 'Фемоскрин 15 (Фемофлор Скрин + ВПЧ (Вирус папилломы человека) 15 типов)',
+                    infoPrice: '525 ₽',
+                })
+                +Analysis-row({
+                    code: 'код: 11-10-001',
+                    title: 'Фемоскрин 15 (Фемофлор Скрин + ВПЧ (Вирус папилломы человека) 21 тип)',
+                    infoPrice: '525 ₽',
+                })
+                +Analysis-row({
+                    code: 'код: 62-94-803',
+                    title: 'Фемофлор 16 + ВПЧ (Вирус папилломы человека) 15 типов с генотипированием',
+                    infoPrice: '525 ₽',
+                })
 
-    section.section.container
-      +Analysis-list({})
 
     section.container
-      .analysis__pages 
-        a(href="#").analysis__pages-number 1
-        a(href="#").analysis__pages-number.active 2
-        a(href="#").analysis__pages-number 3
-        a(href="#").analysis__pages-number.d-none.d-md-block 4
-        a(href="#").analysis__pages-number.d-none.d-md-block 5
-        a(href="#").analysis__pages-number ...
-        a(href="#").analysis__pages-number 25
-        a(href="#").analysis__pages-number
-          +icon('arrow-down')
+        .analysis__show-more Показать еще
+        .analysis__pages 
+            .analysis__pages_arrow-left   
+                +icon('arrow-down')
+            a(href="#").analysis__pages-number 1
+            a(href="#").analysis__pages-number.active 2
+            a(href="#").analysis__pages-number 3
+            a(href="#").analysis__pages-number.d-none.d-md-block 4
+            a(href="#").analysis__pages-number.d-none.d-md-block 5
+            a(href="#").analysis__pages-number ...
+            a(href="#").analysis__pages-number 25
+            a(href="#").analysis__pages-number
+            .analysis__pages_arrow-right     
+                +icon('arrow-down')
