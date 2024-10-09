@@ -59,6 +59,12 @@ const clickHandler = (e) => {
     const accordion = e.target.closest('.accordion');
     const targetItem = e.target.closest('.accordion__item');
     const activeItem = accordion.querySelector('.accordion__item.active');
+    const isDisableMobileRedirect = e.target.closest(
+        '.accordion-disable-mobile-redirect'
+    );
+    if (isDisableMobileRedirect && window.innerWidth <= 900) {
+        e.preventDefault();
+    }
 
     if (targetItem !== activeItem) {
         openItem(targetItem);

@@ -16,8 +16,6 @@ import '@/components/ui/Tabs/TabsNav';
 import '@/mixins/Header/Header';
 import '@/mixins/Btn-callback/Btn-callback';
 import '@/mixins/Btn-up/Btn-up';
-import '@/mixins/Sidebar-analysis/Sidebar-analysis';
-import '@/mixins/Sidebar-analysis/StickyTabs';
 import '@/mixins/Main-menu/Main-menu';
 
 import MyModal from '@/components/ui/MyModal/MyModal';

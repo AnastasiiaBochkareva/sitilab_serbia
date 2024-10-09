@@ -1096,3 +1096,272 @@ ul {
     //     }
     // }
 }
+.doctors-cards {
+    &__title {
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 22px; /* 126.316% */
+        letter-spacing: -0.2%;
+        margin-bottom: 50px;
+        padding-top: 25px;
+        color: rgb(59, 75, 100);
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding-bottom: 100px;
+    }
+    &__item {
+        padding: 30px 35px 35px;
+        border: 1px solid rgb(217, 225, 233);
+        border-radius: 20px;
+        display: grid;
+        column-gap: 35px;
+        justify-content: space-between;
+        grid-template-columns: 260px 1fr 337px;
+    }
+    a {
+        text-decoration: none;
+    }
+    &__img {
+        display: block;
+        width: 100%;
+        max-width: 260px;
+        height: 100%;
+        overflow: hidden;
+        background: linear-gradient(
+            90deg,
+            rgb(243, 246, 249),
+            rgb(227, 229, 232)
+        );
+        border-radius: 20px;
+        grid-row-start: 1;
+        grid-row-end: 6;
+        img {
+            object-fit: cover;
+        }
+    }
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 11px;
+        margin-bottom: 6px;
+        grid-column-start: 2;
+        .subtitle {
+            font-size: 16px;
+            color: rgb(142, 154, 171);
+            position: relative;
+            &:not(:last-child) {
+                &::after {
+                    content: '';
+                    width: 3px;
+                    height: 3px;
+                    display: block;
+                    background-color: rgb(142, 154, 171);
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    right: -7px;
+                }
+            }
+        }
+    }
+    &__name {
+        line-height: 34px;
+        margin-bottom: 20px;
+        color: rgb(59, 75, 100);
+        grid-column-start: 2;
+        grid-row-start: 2;
+        &:hover {
+            color: rgb(0, 171, 223);
+        }
+    }
+    &__job {
+        color: rgb(0, 171, 223);
+        background-color: rgb(230, 248, 253);
+        padding: 2px 10px;
+        border-radius: 5px;
+        max-width: max-content;
+        max-height: 30px;
+        height: 100%;
+        margin-bottom: 22px;
+        grid-column-start: 2;
+        grid-row-start: 3;
+    }
+    &__experience {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 22px;
+        grid-column-start: 2;
+        grid-row-start: 4;
+    }
+    &__rating {
+        display: flex;
+        gap: 13px;
+        align-items: center;
+        grid-column-start: 2;
+        grid-row-start: 5;
+    }
+    &__stars {
+        display: flex;
+        gap: 2px;
+        svg {
+            fill: rgb(255, 144, 0);
+            width: 15px;
+            height: 15px;
+        }
+    }
+    &__review {
+        font-weight: 500;
+        line-height: 24px;
+        color: rgb(142, 154, 171);
+    }
+    &__invite {
+        max-width: 337px;
+        width: 100%;
+        padding: 28px 30px 30px;
+        border: 1px solid rgb(178, 186, 198);
+        border-radius: 20px;
+        grid-row-start: 1;
+        grid-row-end: 6;
+        &_title {
+            line-height: 20px;
+            margin-bottom: 26px;
+        }
+        &_subtitle {
+            line-height: 20px;
+            margin-bottom: 14px;
+        }
+        &_adress {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background-color: #f9ffee;
+            border-radius: 5px;
+            margin-bottom: 28px;
+            padding: 10px 12px 12px;
+            width: 100%;
+            span {
+                line-height: 20px;
+            }
+        }
+    }
+    &__btn {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 30px;
+        letter-spacing: 0%;
+        padding: 5px;
+        width: 100%;
+    }
+    .bg-light-gray {
+        background-color: transparent;
+    }
+    @include lg {
+        &__item {
+            grid-template-columns: 260px 1fr;
+        }
+        &__invite {
+            grid-row-start: 6;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            max-width: 100%;
+            border: none;
+            padding: 0;
+            padding-top: 20px;
+            border-radius: 0;
+        }
+    }
+    @include sm {
+        &__title {
+            padding-top: 10px;
+            font-size: 28px;
+            line-height: 34px;
+            margin-bottom: 25px;
+        }
+        &__wrapper {
+            gap: 20px;
+            padding-top: 20px;
+        }
+        &__item {
+            padding: 18px;
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 8px;
+            border: none;
+            background-color: #fff;
+        }
+        &__img {
+            max-width: 110px;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+        &__tags {
+            margin-bottom: 0;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            .subtitle {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+        &__name {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            margin-bottom: 0;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        &__job {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 5;
+            margin-bottom: 7px;
+        }
+        &__experience {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 6;
+            margin-bottom: 7px;
+        }
+        &__rating {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 7;
+        }
+        &__invite {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 8;
+            grid-row-end: 9;
+            border: none;
+            max-width: 100%;
+            padding: 0;
+            border-top: 1px solid rgb(218, 224, 234);
+            margin-top: 12px;
+            &_title {
+                display: none;
+            }
+            &_subtitle {
+                padding-top: 20px;
+            }
+            &_adress {
+                margin-bottom: 20px;
+            }
+        }
+        .bg-light-gray {
+            background-color: rgb(243, 246, 249);
+        }
+    }
+}

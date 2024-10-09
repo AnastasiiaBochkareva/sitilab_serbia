@@ -1,111 +1,114 @@
 .section {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  @include sm {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  // @media (max-width: 800px) {
-  //   padding: 35px 30px;
-  // }
-  // @media (max-width: 400px) {
-  //   padding: 35px 20px;
-  // }
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include sm {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    // @media (max-width: 800px) {
+    //   padding: 35px 30px;
+    // }
+    // @media (max-width: 400px) {
+    //   padding: 35px 20px;
+    // }
 }
 .section-top {
-  padding-top: 50px;
-  @media (max-width: 800px) {
-    padding: 35px 30px 0px;
-  }
-  @media (max-width: 400px) {
-    padding: 35px 20px 0;
-  }
+    padding-top: 50px;
+    @media (max-width: 800px) {
+        padding: 35px 30px 0px;
+    }
+    @media (max-width: 400px) {
+        padding: 35px 20px 0;
+    }
 }
 .section-inner {
-  padding-top: 50px;
-  padding-bottom: 60px;
-  @media (max-width: 800px) {
-    padding: 35px 30px 40px;
-  }
-  @media (max-width: 400px) {
-    padding: 35px 20px 40px;
-  }
+    padding-top: 50px;
+    padding-bottom: 60px;
+    @media (max-width: 800px) {
+        padding: 35px 30px 40px;
+    }
+    @media (max-width: 400px) {
+        padding: 35px 20px 40px;
+    }
 }
 .section-inner-full {
-  padding: 40px 50px 60px;
-  @media (max-width: 800px) {
-    padding: 35px 30px 40px;
-  }
-  @media (max-width: 400px) {
-    padding: 35px 20px 40px;
-  }
+    padding: 40px 50px 60px;
+    @media (max-width: 800px) {
+        padding: 35px 30px 40px;
+    }
+    @media (max-width: 400px) {
+        padding: 35px 20px 40px;
+    }
 }
 .title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 38px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 48px; /* 126.316% */
-  letter-spacing: -0.76px;
-  @include sm {
-    font-size: 30px;
-  }
-  @include xs {
-    font-size: 22px;
-    line-height: 34px; /* 154.545% */
-    letter-spacing: -0.44px;
-  }
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 48px; /* 126.316% */
+    letter-spacing: -0.76px;
+    @include sm {
+        font-size: 30px;
+    }
+    @include xs {
+        font-size: 22px;
+        line-height: 34px; /* 154.545% */
+        letter-spacing: -0.44px;
+    }
 }
 .title-sm {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 32px; /* 114.286% */
-  letter-spacing: -0.56px;
-  color: rgb(59, 75, 100);
-  @include sm {
-    font-size: 22px;
-    line-height: 18px;
-    letter-spacing: -0.44px;
-  }
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 114.286% */
+    letter-spacing: -0.56px;
+    color: rgb(59, 75, 100);
+    @include sm {
+        font-size: 22px;
+        line-height: 18px;
+        letter-spacing: -0.44px;
+    }
 }
 .subtitle {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -2%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -2%;
 }
 .subtitle-sm {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: -2%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -2%;
 }
 .text-blue {
-  color: rgb(0, 171, 223);
+    color: rgb(0, 171, 223);
 }
 .bg-blue {
-  background-color: #e6f8fd !important;
+    background-color: #e6f8fd !important;
 }
 .bg-light-blue {
-  background-color: #e6f8fd;
+    background-color: #e6f8fd;
 }
 .bg-dark-blue {
-  background-color: #00abdf !important;
+    background-color: #00abdf !important;
 }
 .bg-red {
-  background-color: #ea516d !important;
+    background-color: #ea516d !important;
 }
 .bg-green {
-  background-color: #05a8b3 !important;
+    background-color: #05a8b3 !important;
+}
+.bg-light-gray {
+    background-color: rgb(243, 246, 249);
 }
 .bg-purpure {
-  background-color: #ba66d8 !important;
+    background-color: #ba66d8 !important;
 }
-.bg-blue-gradient{
-  background: linear-gradient(rgb(0, 171, 223), rgb(1, 116, 181));
-  height: 100vh;
+.bg-blue-gradient {
+    background: linear-gradient(rgb(0, 171, 223), rgb(1, 116, 181));
+    height: 100vh;
 }

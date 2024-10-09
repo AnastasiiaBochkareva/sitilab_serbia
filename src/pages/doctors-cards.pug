@@ -1,0 +1,62 @@
+extends ../templates/main
+
+block variables
+    - const title = 'Доктора'
+    - const description = 'Описание главной страницы'
+
+block content
+
+    main.doctors-cards
+        section.container
+            +Breadcrumbs({
+                doctors: true
+            })
+        section
+            .container
+                .doctors-cards__title.title Врачи в Сербии
+            .bg-light-gray
+                .container
+                    .doctors-cards__wrapper
+                        .doctors-cards__item
+                            a(href="#").doctors-cards__img     
+                                img(src="/assets/img/categories/doctor-card.png", alt="")
+                            .doctors-cards__tags
+                                span.subtitle Гинеколог
+                                span.subtitle Акушер
+                                span.subtitle Врач УЗИ
+                            a(href="@").doctors-cards__name.title-sm Ольга Николаевна Шляховская
+                            .doctors-cards__job.subtitle Врач высшей категории
+                            .doctors-cards__experience.subtitle-sm Стаж: более 28 лет
+                            .doctors-cards__rating
+                                .doctors-cards__stars 
+                                    each el in Array(5)
+                                        +icon("star") 
+                                .doctors-cards__review.subtitle-sm 5 отзывов
+                            .doctors-cards__invite
+                                .doctors-cards__invite_title.subtitle Приглашаю вас на консультацию
+                                .doctors-cards__invite_subtitle.subtitle-sm Телефон: +381-655-737-777
+                                .doctors-cards__invite_adress
+                                    +icon('mark')
+                                    span.subtitle-sm Dubljanska 41, Belgrade
+                                a(href="#").doctors-cards__btn.btn.btn_secondary  Запись на приём
+
+                        .doctors-cards__item
+                            a(href="#").doctors-cards__img     
+                                img(src="/assets/img/categories/doctor-card-two.png", alt="")
+                            .doctors-cards__tags
+                                span.subtitle Врач уролог
+                            a(href="@").doctors-cards__name.title-sm Вадим Игоревич Карпанин
+                            .doctors-cards__job.subtitle Врач высшей категории
+                            .doctors-cards__experience.subtitle-sm Стаж: 10 лет
+                            //- .doctors-cards__rating
+                            //-     .doctors-cards__stars 
+                            //-         each el in Array(5)
+                            //-             +icon("star") 
+                            //-     .doctors-cards__review.subtitle-sm 5 отзывов
+                            .doctors-cards__invite
+                                .doctors-cards__invite_title.subtitle Приглашаю вас на консультацию
+                                .doctors-cards__invite_subtitle.subtitle-sm Телефон: +381-655-737-777
+                                .doctors-cards__invite_adress
+                                    +icon('mark')
+                                    span.subtitle-sm Dubljanska 41, Belgrade
+                                a(href="#").doctors-cards__btn.btn.btn_secondary  Запись на приём
