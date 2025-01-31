@@ -1,0 +1,14 @@
+extends ../templates/main
+
+block variables
+    - const title = 'Сотрудничество'
+    - const description = 'Описание главной страницы'
+
+block content
+
+    main.doctors-cards
+        section.container
+        +Breadcrumbs({
+            article: true
+        })
+        section.container.section
