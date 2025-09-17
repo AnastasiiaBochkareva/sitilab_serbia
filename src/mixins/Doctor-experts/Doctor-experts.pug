@@ -1,0 +1,17 @@
+mixin Doctor-experts(param={})
+    .ask-experts
+        .ask-experts__head
+            .ask-experts__title <span>Эксперты</span> <span>и специалисты</span> <span>Ситилаб</span>
+            .ask-experts__subtitle 
+                span Врачи клинической лабораторной диагностики высшей категории 
+                .ask-experts__rating 
+                    each el in Array(5)
+                        +icon('ask-star')
+        .ask-experts__body
+            +Slider-navigation()
+            .swiper-wrapper 
+                each el, index in Array(8)
+                    .swiper-slide
+                        +Experts-card({
+                            expert: index % 2 === 0 ? true : undefined
+                        })
