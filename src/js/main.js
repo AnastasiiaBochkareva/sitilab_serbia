@@ -18,124 +18,160 @@ import 'swiper/css/autoplay';
 
 /* eslint-disable */
 function handleDOMLoaded() {
+    if (document.documentElement.clientWidth < 1270) {
+        const mainAbout = new Swiper('.main-about__slider', {
+            modules: [Pagination, Autoplay],
+            slidesPerView: '3',
+            spaceBetween: 20,
+            observer: true,
+            observeParents: true,
+            observeSlideChildren: true,
+            grabCursor: true,
+            slideToClickedSlide: true,
+            pagination: {
+                el: '.slider-pagination',
+                type: 'bullets',
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                700: {
+                    slidesPerView: '2.8',
+                    spaceBetween: 10,
+                },
+                500: {
+                    slidesPerView: '2',
+                    spaceBetween: 5,
+                },
+                300: {
+                    slidesPerView: '1',
+                },
+            },
+        });
+    }
 
-  if (document.documentElement.clientWidth < 1270) {
-    const mainAbout = new Swiper('.main-about__slider', {
-      modules: [Pagination, Autoplay],
-      slidesPerView: '3',
-      spaceBetween: 20,
-      observer: true,
-      observeParents: true,
-      observeSlideChildren: true,
-      grabCursor: true,
-      slideToClickedSlide: true,
-      pagination: {
-        el: '.slider-pagination',
-        type: 'bullets',
-      },
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      breakpoints: {
-        700: {
-          slidesPerView: '2.8',
-          spaceBetween: 10,
+    const mainReview = new Swiper('.main-review__slider', {
+        modules: [Navigation, Pagination, Autoplay],
+        slidesPerView: '4',
+        spaceBetween: 20,
+        navigation: {
+            prevEl: '.slider-navigation_prev',
+            nextEl: '.slider-navigation_next',
         },
-        500: {
-          slidesPerView: '2',
-          spaceBetween: 5,
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
+        grabCursor: true,
+        slideToClickedSlide: true,
+        // pagination: {
+        //   el: '.slider-pagination', // все заработало при отключении
+        //   type: 'bullets',
+        // },
+        autoplay: {
+            // перестали переключаться точки
+            delay: 5000,
+            disableOnInteraction: false,
         },
-        300: {
-          slidesPerView: '1',
+        loop: true, // осталось 2 точки в пагинации
+        breakpoints: {
+            1270: {
+                slidesPerView: '4',
+                spaceBetween: 20,
+            },
+            1000: {
+                slidesPerView: '3.5',
+            },
+            900: {
+                slidesPerView: '2.5',
+            },
+            600: {
+                slidesPerView: '2',
+            },
+            374: {
+                slidesPerView: '1.3',
+                spaceBetween: 10,
+            },
+            300: {
+                slidesPerView: '1',
+            },
         },
-      },
     });
-  };
-  
-  const mainReview = new Swiper('.main-review__slider', {
-    modules: [Navigation, Pagination, Autoplay],
-    slidesPerView: '4',
-    spaceBetween: 20,
-    navigation: {
-      prevEl: '.slider-navigation_prev',
-      nextEl: '.slider-navigation_next',
-    },
-    observer: true,
-    observeParents: true,
-    observeSlideChildren: true,
-    grabCursor: true,
-    slideToClickedSlide: true,
-    // pagination: {
-    //   el: '.slider-pagination', // все заработало при отключении
-    //   type: 'bullets',
-    // },
-    autoplay: { // перестали переключаться точки
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    loop: true, // осталось 2 точки в пагинации
-    breakpoints: {
-      1270: {
+
+    const article = new Swiper('.article__slider ', {
+        modules: [Navigation, Pagination, Autoplay],
         slidesPerView: '4',
         spaceBetween: 20,
-      },
-      1000: {
-        slidesPerView: '3.5',
-      },
-      900: {
-        slidesPerView: '2.5',
-      },
-      600: {
-        slidesPerView: '2',
-      },
-      374: {
-        slidesPerView: '1.3',
-        spaceBetween: 10,
-      },
-      300: {
-        slidesPerView: '1',
-      },
-    },
-  });
-  
-  const article = new Swiper('.article__slider ', {
-    modules: [Navigation, Pagination, Autoplay],
-    slidesPerView: '4',
-    spaceBetween: 20,
-    observer: true,
-    observeParents: true,
-    observeSlideChildren: true,
-    grabCursor: true,
-    breakpoints: {
-      1440: {
-        slidesPerView: '4',
-        spaceBetween: 20,
-      },
-      1000: {
-        slidesPerView: '4',
-      },
-      900: {
-        slidesPerView: '3.5',
-      },
-      600: {
-        slidesPerView: '2.5',
-      },
-      376: {
-        slidesPerView: '1.5',
-        spaceBetween: 10,
-      },
-      300: {
-        slidesPerView: '1.1',
-        spaceBetween: 10,
-      },
-    },
-  });
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
+        grabCursor: true,
+        breakpoints: {
+            1440: {
+                slidesPerView: '4',
+                spaceBetween: 20,
+            },
+            1000: {
+                slidesPerView: '4',
+            },
+            900: {
+                slidesPerView: '3.5',
+            },
+            600: {
+                slidesPerView: '2.5',
+            },
+            376: {
+                slidesPerView: '1.5',
+                spaceBetween: 10,
+            },
+            300: {
+                slidesPerView: '1.1',
+                spaceBetween: 10,
+            },
+        },
+    });
+    const askExpertsSlider = new Swiper('.ask-experts__body', {
+        modules: [Navigation],
+        slidesPerView: '4.5',
+        spaceBetween: 28,
+        navigation: {
+            prevEl: document.querySelector(
+                '.ask-experts .slider-navigation_prev'
+            ),
+            nextEl: document.querySelector(
+                '.ask-experts .slider-navigation_next'
+            ),
+        },
+        noSwiping: true,
+        noSwipingSelector: '.experts-cards__btn',
+        grabCursor: true,
+        slideToClickedSlide: true,
+        breakpoints: {
+            1308: {
+                slidesPerView: '4.5',
+            },
+            901: {
+                slidesPerView: '3.5',
+                spaceBetween: 20,
+            },
+            701: {
+                slidesPerView: '2.8',
+            },
+            400: {
+                slidesPerView: '1.8',
+            },
+            370: {
+                slidesPerView: '1.4',
+            },
+            300: {
+                slidesPerView: '1',
+            },
+        },
+    });
 }
 
 document.addEventListener('DOMContentLoaded', handleDOMLoaded);
-
-
 
 // function handleDOMLoaded() {
 
@@ -172,7 +208,7 @@ document.addEventListener('DOMContentLoaded', handleDOMLoaded);
 //       },
 //     });
 //   };
-  
+
 //   const mainReview = new Swiper('.main-review__slider', {
 //     modules: [Navigation, Pagination, Autoplay],
 //     slidesPerView: '4',
@@ -218,7 +254,7 @@ document.addEventListener('DOMContentLoaded', handleDOMLoaded);
 //       },
 //     },
 //   });
-  
+
 //   const article = new Swiper('.article__slider ', {
 //     modules: [Navigation, Pagination, Autoplay],
 //     slidesPerView: '4',
