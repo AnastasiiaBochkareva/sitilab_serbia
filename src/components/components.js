@@ -18,6 +18,8 @@ import '@/mixins/Btn-callback/Btn-callback';
 import '@/mixins/Btn-up/Btn-up';
 import '@/mixins/Main-menu/Main-menu';
 
+import '@/mixins/Doctor-experts/Doctor-experts';
+
 import MyModal from '@/components/ui/MyModal/MyModal';
 // import Filters from '@/components/ui/Filters/Filters';
 // import Validation from '@/components/ui/Form/Validation';
