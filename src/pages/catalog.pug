@@ -5,11 +5,8 @@ block variables
     - const description = 'Описание главной страницы'
 
 block content
-
-    //+Header()
-    .container(style="margin-top: 24px;")
-        //+Breadcrumbs()
-    .container
-        //+ProductGroup()
+    .container.bg-gray
+        +Doctor-experts({
+            })
 
     include _modals
